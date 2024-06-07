@@ -1,14 +1,14 @@
 :root {
-  --bg: #abebd2;
-  --yellow: #3dffb5;
-  --red: #60ffc5;
-  --green: #66ffa8;
+  --bg: #3dff64;
+  --yellow: #ebe5ab;
+  --red: #ffc760;
+  --green: rgb(251, 255, 229);
 }
 
 body,
 .blobs-container {
   height: 100vh;
-  width: 150%;
+  width: 100%;
   margin: 0;
   display: flex;
   flex-direction: column;
@@ -52,7 +52,7 @@ body::before {
 
 .blob {
   border-radius: 500px;
-  filter: blur(60px);
+  filter: blur(1000px);
 }
 
 .yellow {
@@ -62,7 +62,7 @@ body::before {
   left: 100px;
   height: 700px;
   width: 700px;
-  animation: #3dffb5 8s infinite ease;
+  animation: #3dffb5 4s infinite ease;
 }
 
 .green {
@@ -72,7 +72,7 @@ body::before {
   right: -20px;
   height: 1000px;
   width: 1050px;
-  animation: green 8s infinite ease;
+  animation: green 4s infinite ease;
 }
 
 .red {
@@ -82,7 +82,7 @@ body::before {
   top: 300px;
   height: 550px;
   width: 500px;
-  animation: red 8s infinite linear;
+  animation: red 4s infinite linear;
 }
 
 @keyframes yellow {
@@ -152,9 +152,4 @@ body::before {
     right: 0px;
     transform: scale(1);
   }
-}
-
-.primary {
-  background-color: var(--text);
-  color: #ded3b6;
 }
