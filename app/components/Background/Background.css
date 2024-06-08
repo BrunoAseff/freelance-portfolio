@@ -1,8 +1,8 @@
 :root {
   --bg: #3dff64;
-  --yellow: #ebe5ab;
-  --red: #ffc760;
-  --green: rgb(251, 255, 229);
+  --left: #8be2a1;
+  --middle: rgb(181, 253, 181);
+  --right: rgb(0, 156, 13);
 }
 
 body,
@@ -45,111 +45,38 @@ body::before {
   align-items: center;
   z-index: 0;
   height: 100px;
-  width: 100px;
+  width: 100%;
   position: relative;
   right: 5em;
 }
 
 .blob {
   border-radius: 500px;
-  filter: blur(1000px);
+  filter: blur(250px);
 }
 
-.yellow {
-  background-color: var(--yellow);
+.left {
+  background-color: var(--left);
   position: absolute;
-  top: 200px;
-  left: 100px;
-  height: 700px;
-  width: 700px;
-  animation: #3dffb5 4s infinite ease;
+  top: -10%;
+  right: 70%;
+  height: 1500px;
+  width: 1550px;
 }
 
-.green {
-  background-color: var(--green);
+.right {
+  background-color: var(--right);
   position: absolute;
   top: 80px;
-  right: -20px;
-  height: 1000px;
-  width: 1050px;
-  animation: green 4s infinite ease;
+  right: -45%;
+  height: 1500px;
+  width: 1550px;
 }
 
-.red {
-  background-color: var(--red);
+.middle {
+  background-color: var(--middle);
   position: absolute;
-  right: 0;
-  top: 300px;
-  height: 550px;
-  width: 500px;
-  animation: red 4s infinite linear;
-}
-
-@keyframes yellow {
-  0% {
-    top: 200px;
-    left: 100px;
-    transform: scale(1);
-  }
-  30% {
-    top: 300px;
-    left: 150px;
-    transform: scale(1.2);
-  }
-  60% {
-    top: 100px;
-    left: 200px;
-    transform: scale(1.3);
-  }
-  100% {
-    top: 200px;
-    left: 100px;
-    transform: scale(1);
-  }
-}
-
-@keyframes green {
-  0% {
-    top: 80px;
-    right: -20px;
-    transform: scale(1.2);
-  }
-  30% {
-    top: 300px;
-    right: -20px;
-    transform: scale(1);
-  }
-  60% {
-    top: 200px;
-    right: 100px;
-    transform: scale(1);
-  }
-  100% {
-    top: 80px;
-    right: -20px;
-    transform: scale(1.2);
-  }
-}
-
-@keyframes red {
-  0% {
-    top: 250px;
-    right: 0px;
-    transform: scale(1);
-  }
-  30% {
-    top: 150px;
-    right: 150px;
-    transform: scale(1.4);
-  }
-  60% {
-    top: 250px;
-    right: 100px;
-    transform: scale(1);
-  }
-  100% {
-    top: 250px;
-    right: 0px;
-    transform: scale(1);
-  }
+  top: 350px;
+  height: 1500px;
+  width: 1550px;
 }

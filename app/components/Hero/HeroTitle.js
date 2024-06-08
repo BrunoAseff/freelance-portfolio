@@ -49,11 +49,11 @@ export default function HeroTitle() {
   useEffect(() => {
     anime({
       targets: ".char",
-      translateY: -25,
+      translateY: -50,
       opacity: [0, 1],
       direction: "normal",
       loop: 1,
-      delay: anime.stagger(25),
+      delay: anime.stagger(20),
       easing: "spring(1, 80, 10, 0)",
     });
 

@@ -4,15 +4,15 @@ export default function Background() {
   return (
     <div className="blobs-container">
       <div className="blob-cont">
-        <div className="yellow blob"></div>
-        <div className="red blob"></div>
-        <div className="green blob"></div>
+        <div className="left blob"></div>
+        <div className="middle blob"></div>
+        <div className="right blob"></div>
       </div>
       <svg>
         <filter id="noiseFilter">
           <feTurbulence
             type="fractalNoise"
-            baseFrequency="1"
+            baseFrequency="0.6"
             stitchTiles="stitch"
           />
           <feColorMatrix
