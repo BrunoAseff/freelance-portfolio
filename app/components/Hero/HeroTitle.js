@@ -7,17 +7,17 @@ import Image from "next/image";
 
 const TitleWrapper = styled.div`
   font-family: var(--font-sofia);
-  font-size: 5rem;
+  font-size: 7rem;
   position: relative;
   white-space: nowrap;
   line-height: 1.2;
 
   @media (max-width: 1200px) {
-    font-size: 3rem;
+    font-size: 5rem;
     padding: 20px 20px 0px 20px;
   }
 
-  @media (max-width: 360px) {
+  @media (max-width: 600px) {
     font-size: 2.3rem;
     padding: 20px 20px 0px 20px;
   }
@@ -33,7 +33,11 @@ const ImageWrapper = styled.div`
   position: absolute;
   top: 0;
   right: 0;
-  transform: translate(-1150%, 3%);
+  transform: translate(-1350%);
+
+  @media (max-width: 1200px) {
+    transform: translate(-1000%);
+  }
 
   @media (max-width: 768px) {
     position: relative;
@@ -86,8 +90,8 @@ export default function HeroTitle() {
         <Image
           ref={imageRef}
           src="/varinha.svg"
-          width={50}
-          height={50}
+          width={60}
+          height={60}
           alt="Varinha"
         />
       </ImageWrapper>

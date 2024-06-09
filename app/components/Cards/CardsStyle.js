@@ -26,18 +26,29 @@ export const CardsContainer = styled.div`
 `;
 
 export const Card = styled.div`
-  background: #2c6e49;
-  border: 1px solid rgba(255, 255, 255, 0.9);
+  flex-wrap: wrap;
+  min-width: 400px;
+  max-width: 500px;
+  background: #008526;
+  border: 1px solid rgba(0, 117, 51, 1);
   width: 30vw;
   height: 300px;
   border-radius: 10px;
   text-align: left;
   position: relative;
   overflow: hidden;
-  filter: saturate(0);
+  filter: saturate(0.1) url("/Noise.svg");
+
   &:hover {
+    transition-duration: 2s;
     cursor: pointer;
-    filter: saturate(1);
+    filter: saturate(1) url("/Noise.svg");
+    background: linear-gradient(
+      -45deg,
+      rgba(0, 117, 51, 1) 0%,
+      rgba(0, 176, 77, 1) 35%,
+      rgba(83, 181, 144, 1) 100%
+    );
   }
 `;
 
@@ -63,6 +74,7 @@ export const StyledImage = styled(Image)`
   left: 30%;
   top: 40%;
   border-radius: 10px;
+  box-shadow: 0 0 30px rbga(0, 0, 0, 1);
 `;
 
 export const Pallete = styled.div`
@@ -73,6 +85,6 @@ export const Pallete = styled.div`
   margin: 30px;
   position: absolute;
   top: ${(props) => props.top || "60%"};
-  left: -10%;
+  left: -15%;
   right: 40%;
 `;
