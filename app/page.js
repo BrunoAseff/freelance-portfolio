@@ -9,7 +9,7 @@ export default function Page() {
         <div className="nav">
           <ul>
             <li>
-              <a>Serviços</a>
+              <a>Projetos</a>
             </li>
             <li>
               <a>Valores</a>

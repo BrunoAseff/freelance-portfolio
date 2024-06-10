@@ -4,9 +4,10 @@
 }
 
 html {
-  background: #0e100f;
+  background-color: #f7ece1;
 }
 .container {
+  background-color: #0e100f;
   color: #f7ece1;
   width: 100%;
   overflow: auto;
@@ -16,7 +17,6 @@ html {
   margin-top: 40px;
   position: fixed;
   width: 100%;
-  height: 100px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -59,7 +59,7 @@ ul li {
 }
 
 li {
-  margin: 10px 35px;
+  margin: 5px 35px;
   border-radius: 30px;
 }
 
@@ -71,8 +71,8 @@ li:hover {
 }
 
 .herosection {
-  margin-top: 5%;
-  height: 75vh;
+  margin-top: 10%;
+  height: 73vh;
   font-size: 40px;
   display: flex;
   width: 100%;
@@ -105,6 +105,7 @@ li:hover {
 }
 
 .projects {
+  overflow: hidden;
   color: var(--secundaria);
   height: 1000px;
   display: flex;

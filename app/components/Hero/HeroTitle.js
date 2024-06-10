@@ -82,7 +82,7 @@ export default function HeroTitle() {
       <br />
       <StyledSplt
         className="char"
-        text="negócio precisa"
+        text="negócio merece"
         wrapper="span"
         classNameWrapper="char"
       />
