@@ -1,4 +1,3 @@
-import Background from "./components/Background/Background";
 import "./page.css";
 import HeroTitle from "./components/Hero/HeroTitle";
 import Cards from "./components/Cards/Cards";
@@ -6,8 +5,6 @@ import Cards from "./components/Cards/Cards";
 export default function Page() {
   return (
     <>
-      <Background />
-
       <div className="container">
         <div className="nav">
           <ul>

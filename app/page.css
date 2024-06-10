@@ -3,6 +3,9 @@
   --secundaria: #454545;
 }
 
+html {
+  background: #0e100f;
+}
 .container {
   color: #f7ece1;
   width: 100%;
@@ -10,14 +13,14 @@
 }
 
 .nav {
-  margin-top: 20px;
+  margin-top: 40px;
   position: fixed;
   width: 100%;
   height: 100px;
   display: flex;
   justify-content: center;
   align-items: center;
-  color: var(--secundaria);
+  color: #f7ece1;
   font-size: 15px;
   z-index: 99;
   opacity: 0;
@@ -38,10 +41,10 @@ ul {
   list-style-type: none;
   margin: 0;
   display: flex;
-  border: rgba(247, 236, 225, 0.2) solid 1px;
+  border: #f7ece1 solid 4px;
   border-radius: 50px;
-  padding: 15px;
-  background: rgba(255, 255, 255, 0.2);
+  padding: 0 15px;
+  background: #0e100f;
   -webkit-backdrop-filter: blur(1000px);
   backdrop-filter: blur(1000px);
 }
@@ -52,7 +55,19 @@ ul {
   }
 }
 ul li {
-  margin: 0 35px;
+  padding: 15px;
+}
+
+li {
+  margin: 10px 35px;
+  border-radius: 30px;
+}
+
+li:hover {
+  transition: 0.3s;
+  background: #0ae448;
+  cursor: pointer;
+  color: #0e100f;
 }
 
 .herosection {
@@ -68,7 +83,7 @@ ul li {
 }
 
 .subtitle {
-  color: var(--secundaria);
+  color: #0ae448;
   font-size: 1.2rem;
   opacity: 0;
   animation: fadeIn 1s ease-in-out forwards;
@@ -96,5 +111,5 @@ ul li {
   width: 100%;
   align-items: center;
   flex-direction: column;
-  background: linear-gradient(rgba(247, 236, 225, 0), rgba(61, 255, 100, 0.5));
+  background: transparent;
 }
