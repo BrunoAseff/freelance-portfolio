@@ -1,11 +1,13 @@
 import "./page.css";
 import HeroTitle from "./components/Hero/HeroTitle";
 import Cards from "./components/Cards/Cards";
+import Valores from "./components/Valores/Valores";
 
 export default function Page() {
   return (
     <>
       <div className="container">
+        <div className="Background"></div>
         <div className="nav">
           <ul>
             <li>
@@ -29,6 +31,8 @@ export default function Page() {
         <div className="projects">
           <Cards />
         </div>
+
+        <Valores />
       </div>
     </>
   );

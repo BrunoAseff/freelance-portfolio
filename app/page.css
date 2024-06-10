@@ -2,15 +2,53 @@
   --principal: #f7ece1;
   --secundaria: #454545;
 }
+body {
+  overflow-x: hidden;
 
-html {
-  background-color: #f7ece1;
-}
-.container {
   background-color: #0e100f;
+
+  --sb-track-color: #0e100f;
+  --sb-thumb-color: #f7ece1;
+  --sb-size: 15px;
+}
+
+body::-webkit-scrollbar {
+  width: var(--sb-size);
+}
+
+body::-webkit-scrollbar-track {
+  background: var(--sb-track-color);
+  border-radius: 10px;
+}
+
+body::-webkit-scrollbar-thumb {
+  background: var(--sb-thumb-color);
+  border-radius: 10px;
+  border: 2px solid #0e100f;
+}
+
+@supports not selector(::-webkit-scrollbar) {
+  body {
+    scrollbar-color: var(--sb-thumb-color) var(--sb-track-color);
+  }
+}
+
+.container {
   color: #f7ece1;
+  background-color: #0e100f;
   width: 100%;
   overflow: auto;
+}
+
+.Background {
+  border-bottom: 1px solid #f7ece1;
+  opacity: 0.2;
+  background-image: radial-gradient(#f7ece1 0.5px, #0e100f 0.5px);
+  background-size: 10px 10px;
+  width: 100%;
+  height: 100vh;
+  position: absolute;
+  z-index: 0;
 }
 
 .nav {
@@ -83,11 +121,17 @@ li:hover {
 }
 
 .subtitle {
+  z-index: 1;
   color: #0ae448;
   font-size: 1.2rem;
   opacity: 0;
   animation: fadeIn 1s ease-in-out forwards;
   animation-delay: 2s;
+}
+@media (max-width: 700px) {
+  .subtitle {
+    font-size: 1rem;
+  }
 }
 
 @keyframes fadeIn {
@@ -105,7 +149,7 @@ li:hover {
 }
 
 .projects {
-  overflow: hidden;
+  overflow: auto;
   color: var(--secundaria);
   height: 1000px;
   display: flex;

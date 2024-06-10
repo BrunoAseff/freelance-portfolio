@@ -26,6 +26,7 @@ export const CardsContainer = styled.div`
 `;
 
 export const Card = styled.div`
+  overflow: hidden;
   flex-wrap: wrap;
   min-width: 400px;
   max-width: 500px;
@@ -35,6 +36,7 @@ export const Card = styled.div`
   border-radius: 10px;
   text-align: left;
   position: relative;
+  transition: filter 0.3s;
   &:hover {
     cursor: pointer;
     filter: saturate(1);
@@ -79,6 +81,12 @@ export const Card = styled.div`
     );
     z-index: 1;
   }
+
+  @media (max-width: 600px) {
+    flex-wrap: wrap;
+    width: 90%; /* Adjust the width for smaller screens */
+    margin: 0 auto; /* Center the cards */
+  }
 `;
 
 export const CardContent = styled.div`
@@ -90,6 +98,18 @@ export const CardContent = styled.div`
   inset: 1px;
   position: absolute;
   z-index: 0;
+
+  @media (max-width: 600px) {
+    background: linear-gradient(
+      45deg,
+      rgba(14, 16, 15, 1) 0%,
+      rgba(14, 16, 15, 1) 50%,
+      rgba(0, 45, 11, 1) 100%
+    );
+
+    padding: 20px;
+    flex-wrap: wrap;
+  }
 `;
 
 export const CardTitle = styled.h1`
@@ -109,6 +129,7 @@ export const CardSubtitle = styled.p`
 `;
 
 export const StyledImage = styled(Image)`
+  margin: 0 1px 1px 0;
   position: relative;
   left: 30%;
   top: 40%;
@@ -117,9 +138,9 @@ export const StyledImage = styled(Image)`
 `;
 
 export const Container = styled.div`
+  overflow: hidden;
   width: 100%;
   height: 100%;
-  overflow: hidden;
   position: relative;
 `;
 
