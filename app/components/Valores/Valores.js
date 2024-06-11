@@ -3,11 +3,11 @@
 import styled from "styled-components";
 
 const Container = styled.div`
-  width: 100%;
   display: flex;
+  flex-wrap: wrap;
   justify-content: center;
   align-items: center;
-  text-align: center;
+  width: 100%;
   background: transparent;
   flex-direction: column;
   position: relative;
@@ -20,25 +20,26 @@ const Title = styled.h1`
 `;
 
 const Card = styled.div`
-  min-width: 250px;
+  flex: 1 1 20%;
+  min-width: 350px;
+  max-width: 23vw;
   text-align: start;
-  height: 600px;
-  width: 20%;
   border-radius: 20px;
   color: #f7ece1;
   border: solid 1px #f7ece1;
   transition: border 0.3s ease;
   display: flex;
   flex-direction: column;
-  justify-content: space-between; /* Ensure proper spacing */
+  justify-content: space-between;
+  flex-shrink: 0;
 
   &:hover {
     border: solid 1px #0ae448;
   }
 
   @media (max-width: 950px) {
+    flex: 1 1 70vw;
     height: 600px;
-    min-width: 70vw;
   }
 `;
 
@@ -47,36 +48,32 @@ const CardContainer = styled.div`
   display: flex;
   justify-content: center;
   gap: 4rem;
-  @media (max-width: 950px) {
-    align-items: center;
-    flex-wrap: wrap;
-    flex-direction: column;
-  }
+  flex-wrap: wrap;
 `;
 
 const P = styled.p`
-  font-size: 1rem;
+  font-size: clamp(1rem, 2.5vw, 1.5rem);
   color: #0ae448;
-  margin: 30px 0 0 30px;
+  margin: 1.5rem 0 0 1.5rem;
 `;
 
 const P2 = styled.p`
-  font-size: 1rem;
+  font-size: clamp(1.2rem, 2.5vw, 1.5rem);
   color: #f7ece1;
-  margin: 30px 0 0 30px;
+  margin: 1.5rem 0 0 1.5rem;
 `;
 
 const Price = styled.p`
   font-weight: 600;
-  font-size: 3rem;
+  font-size: clamp(2rem, 5vw, 3rem);
   color: #0ae448;
-  margin: 10px 0 0 30px;
+  margin: 1rem 0 0 1.5rem;
 `;
 
 const List = styled.ul`
-  font-size: 1rem;
+  font-size: clamp(1rem, 2vw, 1rem);
   color: rgba(247, 236, 225, 0.5);
-  margin: 10px 0 0 30px;
+  margin: 1rem 0 0 1.5rem; /* Adjust margin using CSS variables */
 `;
 
 const Li = styled.li`
@@ -86,15 +83,15 @@ const Li = styled.li`
 
 const PriceDescription = styled.p`
   width: 100%;
-  font-size: 1rem;
+  font-size: clamp(1rem, 2vw, 1rem);
   color: rgba(247, 236, 225, 0.5);
-  margin: 10px 0 50px 30px;
+  margin: 1rem 0 2rem 1.5rem;
 `;
 
 const ButtonContainer = styled.div`
   display: flex;
   justify-content: center;
-  margin-bottom: 50px; /* Adjust margin as needed */
+  margin: 60px 0;
 `;
 
 const Button = styled.button`
