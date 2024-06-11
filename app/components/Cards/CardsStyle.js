@@ -50,7 +50,7 @@ export const Card = styled.div`
     filter: saturate(1);
     background: radial-gradient(
       800px circle at var(--mouse-x) var(--mouse-y),
-      rgba(0, 117, 51, 1),
+      rgba(247, 236, 225, 1),
       transparent 40%
     );
   }
@@ -88,7 +88,7 @@ export const Card = styled.div`
   &::before {
     background: radial-gradient(
       800px circle at var(--mouse-x) var(--mouse-y),
-      rgba(0, 117, 51, 0.2),
+      rgba(247, 236, 225, 0.1),
       transparent 40%
     );
     z-index: 3;
@@ -97,7 +97,7 @@ export const Card = styled.div`
   &::after {
     background: radial-gradient(
       600px circle at var(--mouse-x) var(--mouse-y),
-      rgba(0, 117, 51, 0.2),
+      rgba(247, 236, 225, 0.2),
       transparent 40%
     );
     z-index: 1;
