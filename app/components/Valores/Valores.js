@@ -11,6 +11,7 @@ const Container = styled.div`
   background: transparent;
   flex-direction: column;
   position: relative;
+  overflow-x: hidden;
 `;
 
 const Title = styled.h1`
@@ -25,7 +26,7 @@ const Card = styled.div`
   max-width: 23vw;
   text-align: start;
   border-radius: 20px;
-  color: #f7ece1;
+  color: ${({ cor }) => cor || "#f7ece1"};
   border: solid 1px #f7ece1;
   transition: border 0.3s ease;
   display: flex;
@@ -34,7 +35,7 @@ const Card = styled.div`
   flex-shrink: 0;
 
   &:hover {
-    border: solid 1px #0ae448;
+    border: solid 1px ${({ cor }) => cor || "#f7ece1"};
   }
 
   @media (max-width: 950px) {
@@ -53,27 +54,21 @@ const CardContainer = styled.div`
 
 const P = styled.p`
   font-size: clamp(1rem, 2.5vw, 1.5rem);
-  color: #0ae448;
-  margin: 1.5rem 0 0 1.5rem;
-`;
-
-const P2 = styled.p`
-  font-size: clamp(1.2rem, 2.5vw, 1.5rem);
-  color: #f7ece1;
+  color: ${({ cor }) => cor || "#f7ece1"};
   margin: 1.5rem 0 0 1.5rem;
 `;
 
 const Price = styled.p`
   font-weight: 600;
   font-size: clamp(2rem, 5vw, 3rem);
-  color: #0ae448;
+  color: ${({ cor }) => cor || "#f7ece1"};
   margin: 1rem 0 0 1.5rem;
 `;
 
 const List = styled.ul`
   font-size: clamp(1rem, 2vw, 1rem);
   color: rgba(247, 236, 225, 0.5);
-  margin: 1rem 0 0 1.5rem; /* Adjust margin using CSS variables */
+  margin: 1rem 0 0 1.5rem;
 `;
 
 const Li = styled.li`
@@ -120,7 +115,7 @@ const Button = styled.button`
 
   &:hover {
     cursor: pointer;
-    background: #0ae448;
+    background: ${({ cor }) => cor || "#f7ece1"};
     color: #0e100f;
   }
 `;
@@ -130,9 +125,9 @@ export default function Valores() {
     <Container>
       <Title>Valores</Title>
       <CardContainer>
-        <Card>
-          <P2>Básico</P2>
-          <Price>R$200</Price>
+        <Card cor="#0AE448">
+          <P>Básico</P>
+          <Price cor="#0AE448">R$200</Price>
           <PriceDescription>Lorem ipsum fodkamdfasdfasd</PriceDescription>
           <List>
             <Li>Item 1</Li>
@@ -141,12 +136,12 @@ export default function Valores() {
             <Li>Item 4</Li>
           </List>
           <ButtonContainer>
-            <Button>Escolher pacote</Button>
+            <Button cor="#0AE448">Escolher pacote</Button>
           </ButtonContainer>
         </Card>
-        <Card>
-          <P2>Pro</P2>
-          <Price>R$300</Price>
+        <Card cor="#FF4564">
+          <P>Pro</P>
+          <Price cor="#FF4564">R$300</Price>
           <PriceDescription>Lorem ipsum fodkamdfasdfasd</PriceDescription>
           <List>
             <Li>Item 1</Li>
@@ -155,12 +150,12 @@ export default function Valores() {
             <Li>Item 4</Li>
           </List>
           <ButtonContainer>
-            <Button>Escolher pacote</Button>
+            <Button cor="#FF4564">Escolher pacote</Button>
           </ButtonContainer>
         </Card>
-        <Card>
-          <P>Premium</P>
-          <Price>R$400</Price>
+        <Card cor="#00ACFF">
+          <P cor="#00ACFF">Premium</P>
+          <Price cor="#00ACFF">R$400</Price>
           <PriceDescription>Lorem ipsum fodkamdfasdfasd</PriceDescription>
           <List>
             <Li>Item 1</Li>
@@ -169,7 +164,7 @@ export default function Valores() {
             <Li>Item 4</Li>
           </List>
           <ButtonContainer>
-            <Button>Escolher pacote</Button>
+            <Button cor="#00ACFF">Escolher pacote</Button>
           </ButtonContainer>
         </Card>
       </CardContainer>

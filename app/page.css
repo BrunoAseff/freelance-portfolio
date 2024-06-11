@@ -99,6 +99,7 @@ body::-webkit-scrollbar-thumb {
 }
 
 .li {
+  text-decoration: none;
   margin: 5px 35px;
   border-radius: 30px;
 }
@@ -108,6 +109,10 @@ body::-webkit-scrollbar-thumb {
   background: #0ae448;
   cursor: pointer;
   color: #0e100f;
+}
+a {
+  text-decoration: none;
+  color: inherit;
 }
 
 .herosection {

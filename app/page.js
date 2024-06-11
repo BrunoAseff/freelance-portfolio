@@ -2,6 +2,7 @@ import "./page.css";
 import HeroTitle from "./components/Hero/HeroTitle";
 import Cards from "./components/Cards/Cards";
 import Valores from "./components/Valores/Valores";
+import Proof from "./components/Proof/Proof";
 
 export default function Page() {
   return (
@@ -11,13 +12,16 @@ export default function Page() {
         <div className="nav">
           <ul className="ul">
             <li className="li">
-              <a>Projetos</a>
+              <a href="#projects">Projetos</a>
             </li>
             <li className="li">
-              <a>Valores</a>
+              <a href="#valores">Valores</a>
             </li>
             <li className="li">
-              <a>Contato</a>
+              <a href="#vantagens">Vantagens</a>
+            </li>
+            <li className="li">
+              <a href="#contato">Contato</a>
             </li>
           </ul>
         </div>
@@ -28,11 +32,15 @@ export default function Page() {
             e impactante.
           </p>
         </div>
-        <div className="projects">
+        <div id="projects" className="projects">
           <Cards />
         </div>
-
-        <Valores />
+        <div id="vantagens">
+          <Proof />
+        </div>
+        <div id="valores">
+          <Valores />
+        </div>
       </div>
     </>
   );
