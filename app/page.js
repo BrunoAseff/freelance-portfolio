@@ -9,14 +9,14 @@ export default function Page() {
       <div className="container">
         <div className="Background"></div>
         <div className="nav">
-          <ul>
-            <li>
+          <ul className="ul">
+            <li className="li">
               <a>Projetos</a>
             </li>
-            <li>
+            <li className="li">
               <a>Valores</a>
             </li>
-            <li>
+            <li className="li">
               <a>Contato</a>
             </li>
           </ul>

@@ -43,12 +43,16 @@ body::-webkit-scrollbar-thumb {
 .Background {
   border-bottom: 1px solid #f7ece1;
   opacity: 0.2;
-  background-image: radial-gradient(#f7ece1 0.5px, #0e100f 0.5px);
-  background-size: 10px 10px;
+  background-image: radial-gradient(#f7ece1 0.05rem, #0e100f 0rem);
+  background-size: 0.7rem 0.7rem;
   width: 100%;
   height: 100vh;
   position: absolute;
   z-index: 0;
+  @media (max-width: 600px) {
+    background-image: radial-gradient(#f7ece1 0.05rem, #0e100f 0rem);
+    background-size: 0.7rem 0.7rem;
+  }
 }
 
 .nav {
@@ -75,7 +79,7 @@ body::-webkit-scrollbar-thumb {
   }
 }
 
-ul {
+.ul {
   list-style-type: none;
   margin: 0;
   display: flex;
@@ -83,25 +87,23 @@ ul {
   border-radius: 50px;
   padding: 0 15px;
   background: #0e100f;
-  -webkit-backdrop-filter: blur(1000px);
-  backdrop-filter: blur(1000px);
 }
 
 @media (max-width: 600px) {
-  ul {
+  .ul {
     display: none;
   }
 }
-ul li {
+.ul .li {
   padding: 15px;
 }
 
-li {
+.li {
   margin: 5px 35px;
   border-radius: 30px;
 }
 
-li:hover {
+.li:hover {
   transition: 0.3s;
   background: #0ae448;
   cursor: pointer;

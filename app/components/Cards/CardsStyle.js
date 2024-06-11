@@ -13,16 +13,24 @@ const fadeIn = keyframes`
 `;
 
 export const CardsContainer = styled.div`
+  overflow: auto;
   opacity: 0;
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
   align-items: center;
   gap: 10px;
-  width: 100%;
-  height: 1000px;
+  width: 95%;
   animation: ${fadeIn} 1s ease-in-out forwards;
   animation-delay: 2s;
+  @media (max-width: 600px) {
+    padding: 10px;
+    border: rgba(247, 236, 225, 0.3) solid 1px;
+    border-radius: 5px;
+    overflow: scroll;
+    flex-wrap: wrap;
+    width: 90%;
+  }
 `;
 
 export const Card = styled.div`
@@ -46,6 +54,15 @@ export const Card = styled.div`
       transparent 40%
     );
   }
+  @media (max-width: 600px) {
+    background-color: #0e100f;
+
+    max-width: 200px;
+    width: 80%;
+    &:hover {
+      background: transparent;
+    }
+  }
 
   &:hover::before {
     opacity: 1;
@@ -62,6 +79,10 @@ export const Card = styled.div`
     top: 0px;
     transition: opacity 500ms;
     width: 100%;
+    @media (max-width: 600px) {
+      width: 80%;
+      height: 700px;
+    }
   }
 
   &::before {
@@ -83,9 +104,8 @@ export const Card = styled.div`
   }
 
   @media (max-width: 600px) {
-    flex-wrap: wrap;
-    width: 90%; /* Adjust the width for smaller screens */
-    margin: 0 auto; /* Center the cards */
+    width: 90%;
+    margin: 0 auto;
   }
 `;
 
@@ -100,15 +120,10 @@ export const CardContent = styled.div`
   z-index: 0;
 
   @media (max-width: 600px) {
-    background: linear-gradient(
-      45deg,
-      rgba(14, 16, 15, 1) 0%,
-      rgba(14, 16, 15, 1) 50%,
-      rgba(0, 45, 11, 1) 100%
-    );
-
     padding: 20px;
     flex-wrap: wrap;
+    max-width: 200px;
+    width: 100%;
   }
 `;
 
@@ -117,6 +132,10 @@ export const CardTitle = styled.h1`
   font-size: 2rem;
   margin: 30px;
   position: absolute;
+  @media (max-width: 600px) {
+    margin: 20px 0 0 40px;
+    font-size: 1.8rem;
+  }
 `;
 
 export const CardSubtitle = styled.p`
@@ -126,15 +145,26 @@ export const CardSubtitle = styled.p`
   position: absolute;
   top: 14%;
   opacity: 0.6;
+  @media (max-width: 600px) {
+    margin: 20px 0 0 40px;
+    font-size: 1rem;
+  }
 `;
 
 export const StyledImage = styled(Image)`
+  display: block;
+  width: 100%;
+
   margin: 0 1px 1px 0;
   position: relative;
   left: 30%;
   top: 40%;
   border-radius: 10px;
   box-shadow: 0 0 30px rgba(0, 0, 0, 1);
+  @media (max-width: 600px) {
+    width: 70%;
+    height: 70%;
+  }
 `;
 
 export const Container = styled.div`
@@ -154,4 +184,8 @@ export const Pallete = styled.div`
   top: ${(props) => props.top || "60%"};
   left: -15%;
   right: 40%;
+
+  @media (max-width: 600px) {
+    left: 0%;
+  }
 `;
