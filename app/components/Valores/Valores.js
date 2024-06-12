@@ -76,9 +76,25 @@ const List = styled.ul`
   margin: 1rem 0 0 1.5rem;
 `;
 
-const Li = styled.li`
+const LiGreen = styled.li`
   text-indent: 0.5rem;
-  list-style: url("/list.svg");
+  list-style: url("/listgreen.svg");
+  line-height: 1.04545;
+  width: 100%;
+  margin-top: 1rem;
+`;
+
+const LiBlue = styled.li`
+  text-indent: 0.5rem;
+  list-style: url("/listblue.svg");
+  line-height: 1.04545;
+  width: 100%;
+  margin-top: 1rem;
+`;
+
+const LiRed = styled.li`
+  text-indent: 0.5rem;
+  list-style: url("/listred.svg");
   line-height: 1.04545;
   width: 100%;
   margin-top: 1rem;
@@ -171,14 +187,14 @@ export default function Valores() {
           <Price cor="#0AE448">R$200</Price>
           <PriceDescription>Lorem ipsum fodkamdfasdfasd</PriceDescription>
           <List>
-            <Li>1 página de vendas</Li>
-            <Li>layout personalizado</Li>
-            <Li>Responsivo</Li>
-            <Li>Otimização de SEO</Li>
-            <Li>Botão de WhatsApp</Li>
-            <Li>Otimização de SEO</Li>
-            <Li>Google Analytics</Li>
-            <Li>Facebook Pixel</Li>
+            <LiGreen>1 página de vendas</LiGreen>
+            <LiGreen>layout personalizado</LiGreen>
+            <LiGreen>Responsivo</LiGreen>
+            <LiGreen>Otimização de SEO</LiGreen>
+            <LiGreen>Botão de WhatsApp</LiGreen>
+            <LiGreen>Otimização de SEO</LiGreen>
+            <LiGreen>Google Analytics</LiGreen>
+            <LiGreen>Facebook Pixel</LiGreen>
           </List>
           <ButtonContainer>
             <Button cor="#0AE448">Escolher pacote</Button>
@@ -189,15 +205,15 @@ export default function Valores() {
           <Price cor="#FF4564">R$300</Price>
           <PriceDescription>Lorem ipsum fodkamdfasdfasd</PriceDescription>
           <List>
-            <Li>Até 6 páginas</Li>
-            <Li>layout personalizado</Li>
-            <Li>Responsivo</Li>
-            <Li>Otimização de SEO</Li>
-            <Li>Botão de WhatsApp</Li>
-            <Li>Otimização de SEO</Li>
-            <Li>Google Analytics</Li>
-            <Li>Facebook Pixel</Li>
-            <Li>Formulário de cadastro</Li>
+            <LiRed>Até 6 páginas</LiRed>
+            <LiRed>layout personalizado</LiRed>
+            <LiRed>Responsivo</LiRed>
+            <LiRed>Otimização de SEO</LiRed>
+            <LiRed>Botão de WhatsApp</LiRed>
+            <LiRed>Otimização de SEO</LiRed>
+            <LiRed>Google Analytics</LiRed>
+            <LiRed>Facebook Pixel</LiRed>
+            <LiRed>Formulário de cadastro</LiRed>
           </List>
           <ButtonContainer>
             <Button cor="#FF4564">Escolher pacote</Button>
@@ -208,16 +224,16 @@ export default function Valores() {
           <Price cor="#00ACFF">R$400</Price>
           <PriceDescription>Lorem ipsum fodkamdfasdfasd</PriceDescription>
           <List>
-            <Li>Até 10 páginas</Li>
-            <Li>layout personalizado</Li>
-            <Li>Responsivo</Li>
-            <Li>Otimização de SEO</Li>
-            <Li>Botão de WhatsApp</Li>
-            <Li>Otimização de SEO</Li>
-            <Li>Google Analytics</Li>
-            <Li>Facebook Pixel</Li>
-            <Li>Formulário de cadastro</Li>
-            <Li>Integração com email</Li>
+            <LiBlue>Até 10 páginas</LiBlue>
+            <LiBlue>layout personalizado</LiBlue>
+            <LiBlue>Responsivo</LiBlue>
+            <LiBlue>Otimização de SEO</LiBlue>
+            <LiBlue>Botão de WhatsApp</LiBlue>
+            <LiBlue>Otimização de SEO</LiBlue>
+            <LiBlue>Google Analytics</LiBlue>
+            <LiBlue>Facebook Pixel</LiBlue>
+            <LiBlue>Formulário de cadastro</LiBlue>
+            <LiBlue>Integração com email</LiBlue>
           </List>
           <ButtonContainer>
             <Button cor="#00ACFF">Escolher pacote</Button>
