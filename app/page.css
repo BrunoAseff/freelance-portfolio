@@ -83,9 +83,9 @@ body::-webkit-scrollbar-thumb {
   list-style-type: none;
   margin: 0;
   display: flex;
-  border: #f7ece1 solid 4px;
+  border: #f7ece1 solid 0.1rem;
   border-radius: 50px;
-  padding: 0 15px;
+  padding: 0 10px;
   background: #0e100f;
 }
 
@@ -106,7 +106,7 @@ body::-webkit-scrollbar-thumb {
 
 .li:hover {
   transition: 0.3s;
-  background: #0ae448;
+  background: #f7ece1;
   cursor: pointer;
   color: #0e100f;
 }

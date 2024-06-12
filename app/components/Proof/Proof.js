@@ -1,5 +1,6 @@
 "use client";
 
+import { Button } from "../Button";
 import styled from "styled-components";
 import Image from "next/image";
 
@@ -71,7 +72,7 @@ const Proof = () => {
       <Section>
         <SectionImage
           src="/responsive.png"
-          width={480}
+          width={280}
           height={3}
           alt="Picture of the author"
           className="section-image"
@@ -81,16 +82,20 @@ const Proof = () => {
           <Text>
             Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce ac.
           </Text>
+          <Button>
+            Checar responsividade
+            <Image
+              src="/arrow.svg"
+              width={20}
+              height={20}
+              alt="Picture of the author"
+              className="section-image"
+            />
+          </Button>
         </TextContainer>
       </Section>
 
       <Section>
-        <TextContainer>
-          <Title>Design criativo</Title>
-          <Text>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce ac.
-          </Text>
-        </TextContainer>
         <SectionImage
           src="/design.png"
           width={480}
@@ -98,6 +103,22 @@ const Proof = () => {
           alt="Picture of the author"
           className="section-image"
         />
+        <TextContainer>
+          <Title>Design criativo</Title>
+          <Text>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce ac.
+          </Text>
+          <Button>
+            Ver design criativo
+            <Image
+              src="/arrow.svg"
+              width={20}
+              height={20}
+              alt="Picture of the author"
+              className="section-image"
+            />
+          </Button>
+        </TextContainer>
       </Section>
 
       <Section>
@@ -113,6 +134,16 @@ const Proof = () => {
           <Text>
             Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce ac.
           </Text>
+          <Button>
+            Ver análise de performance
+            <Image
+              src="/arrow.svg"
+              width={20}
+              height={20}
+              alt="Picture of the author"
+              className="section-image"
+            />
+          </Button>
         </TextContainer>
       </Section>
     </Container>

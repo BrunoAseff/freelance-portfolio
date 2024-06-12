@@ -12,15 +12,18 @@ const Container = styled.div`
   flex-direction: column;
   position: relative;
   overflow-x: hidden;
+  min-height: 100vh; /* Ensure container is full height */
 `;
 
 const Title = styled.h1`
-  font-size: 35px;
+  font-size: 3.3rem;
   color: #f7ece1;
-  margin: 2rem;
+  margin: 5rem;
+  z-index: 1; /* Ensure it appears above the background */
 `;
 
 const Card = styled.div`
+  background: #0e100f;
   flex: 1 1 20%;
   min-width: 350px;
   max-width: 23vw;
@@ -33,6 +36,7 @@ const Card = styled.div`
   flex-direction: column;
   justify-content: space-between;
   flex-shrink: 0;
+  z-index: 1;
 
   &:hover {
     border: solid 1px ${({ cor }) => cor || "#f7ece1"};
@@ -50,6 +54,7 @@ const CardContainer = styled.div`
   justify-content: center;
   gap: 4rem;
   flex-wrap: wrap;
+  z-index: 1; /* Ensure it appears above the background */
 `;
 
 const P = styled.p`
@@ -67,11 +72,14 @@ const Price = styled.p`
 
 const List = styled.ul`
   font-size: clamp(1rem, 2vw, 1rem);
-  color: rgba(247, 236, 225, 0.5);
+  color: rgba(247, 236, 225, 0.7);
   margin: 1rem 0 0 1.5rem;
 `;
 
 const Li = styled.li`
+  text-indent: 0.5rem;
+  list-style: url("/list.svg");
+  line-height: 1.04545;
   width: 100%;
   margin-top: 1rem;
 `;
@@ -87,6 +95,11 @@ const ButtonContainer = styled.div`
   display: flex;
   justify-content: center;
   margin: 60px 0;
+
+  @media (max-width: 950px) {
+    width: 100%;
+    margin: 20px 0;
+  }
 `;
 
 const Button = styled.button`
@@ -118,11 +131,39 @@ const Button = styled.button`
     background: ${({ cor }) => cor || "#f7ece1"};
     color: #0e100f;
   }
+
+  @media (max-width: 950px) {
+    width: 90%;
+    padding: 0.75rem 1rem;
+  }
+`;
+
+const Background = styled.div`
+  height: 100%;
+  width: 100%;
+  background-color: #0e100f;
+  opacity: 1;
+  background-image: linear-gradient(
+      rgba(247, 236, 225, 0.1) 0.1rem,
+      transparent 0.1rem
+    ),
+    linear-gradient(
+      to right,
+      rgba(247, 236, 225, 0.1) 0.1rem,
+      transparent 0.1rem
+    );
+  background-size: 50px 50px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 0;
 `;
 
 export default function Valores() {
   return (
     <Container>
+      <Background />
+
       <Title>Valores</Title>
       <CardContainer>
         <Card cor="#0AE448">
@@ -130,10 +171,14 @@ export default function Valores() {
           <Price cor="#0AE448">R$200</Price>
           <PriceDescription>Lorem ipsum fodkamdfasdfasd</PriceDescription>
           <List>
-            <Li>Item 1</Li>
-            <Li>Item 2</Li>
-            <Li>Item 3</Li>
-            <Li>Item 4</Li>
+            <Li>1 página de vendas</Li>
+            <Li>layout personalizado</Li>
+            <Li>Responsivo</Li>
+            <Li>Otimização de SEO</Li>
+            <Li>Botão de WhatsApp</Li>
+            <Li>Otimização de SEO</Li>
+            <Li>Google Analytics</Li>
+            <Li>Facebook Pixel</Li>
           </List>
           <ButtonContainer>
             <Button cor="#0AE448">Escolher pacote</Button>
@@ -144,10 +189,15 @@ export default function Valores() {
           <Price cor="#FF4564">R$300</Price>
           <PriceDescription>Lorem ipsum fodkamdfasdfasd</PriceDescription>
           <List>
-            <Li>Item 1</Li>
-            <Li>Item 2</Li>
-            <Li>Item 3</Li>
-            <Li>Item 4</Li>
+            <Li>Até 6 páginas</Li>
+            <Li>layout personalizado</Li>
+            <Li>Responsivo</Li>
+            <Li>Otimização de SEO</Li>
+            <Li>Botão de WhatsApp</Li>
+            <Li>Otimização de SEO</Li>
+            <Li>Google Analytics</Li>
+            <Li>Facebook Pixel</Li>
+            <Li>Formulário de cadastro</Li>
           </List>
           <ButtonContainer>
             <Button cor="#FF4564">Escolher pacote</Button>
@@ -158,10 +208,16 @@ export default function Valores() {
           <Price cor="#00ACFF">R$400</Price>
           <PriceDescription>Lorem ipsum fodkamdfasdfasd</PriceDescription>
           <List>
-            <Li>Item 1</Li>
-            <Li>Item 2</Li>
-            <Li>Item 3</Li>
-            <Li>Item 4</Li>
+            <Li>Até 10 páginas</Li>
+            <Li>layout personalizado</Li>
+            <Li>Responsivo</Li>
+            <Li>Otimização de SEO</Li>
+            <Li>Botão de WhatsApp</Li>
+            <Li>Otimização de SEO</Li>
+            <Li>Google Analytics</Li>
+            <Li>Facebook Pixel</Li>
+            <Li>Formulário de cadastro</Li>
+            <Li>Integração com email</Li>
           </List>
           <ButtonContainer>
             <Button cor="#00ACFF">Escolher pacote</Button>
