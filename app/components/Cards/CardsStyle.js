@@ -23,13 +23,13 @@ export const CardsContainer = styled.div`
   width: 95%;
   animation: ${fadeIn} 1s ease-in-out forwards;
   animation-delay: 2s;
-  @media (max-width: 650px) {
-    padding: 10px;
+  @media (max-width: 760px) {
+    transform: scale(0.8);
+    padding: 30px;
     border: rgba(247, 236, 225, 0.3) solid 1px;
-    border-radius: 5px;
+    border-radius: 20px;
     overflow: scroll;
     flex-wrap: wrap;
-    width: 90%;
   }
 `;
 

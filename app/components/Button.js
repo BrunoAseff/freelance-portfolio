@@ -2,9 +2,7 @@ import styled from "styled-components";
 
 export const Button = styled.button`
   margin-top: 1rem;
-  text-wrap: nowrap;
   align-items: center;
-  background: 0 0;
   cursor: pointer;
   display: inline-flex;
   font-size: max(1rem, min(0.38835vw + 0.908981rem, 1.375rem));

@@ -3,6 +3,7 @@ import HeroTitle from "./components/Hero/HeroTitle";
 import Cards from "./components/Cards/Cards";
 import Valores from "./components/Valores/Valores";
 import Proof from "./components/Proof/Proof";
+import Contato from "./components/Contato/Contato";
 
 export default function Page() {
   return (
@@ -40,6 +41,9 @@ export default function Page() {
         </div>
         <div id="valores">
           <Valores />
+        </div>
+        <div id="contato">
+          <Contato />
         </div>
       </div>
     </>

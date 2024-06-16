@@ -37,6 +37,7 @@ const Card = styled.div`
   justify-content: space-between;
   flex-shrink: 0;
   z-index: 1;
+  margin-bottom: 20vh;
 
   &:hover {
     border: solid 1px ${({ cor }) => cor || "#f7ece1"};
@@ -140,7 +141,7 @@ const Button = styled.button`
   text-align: center;
   border-radius: 6.25rem;
   border: solid 1px rgba(247, 236, 225, 0.5);
-  font-weight: 600;
+  font-weight: 500;
 
   &:hover {
     cursor: pointer;
