@@ -14,6 +14,7 @@ import {
 
 const Proof = () => {
   const [hoverColor, setHoverColor] = useState("");
+  const [buttonHover, setButtonHover] = useState({});
 
   const handleMouseEnter = (color) => {
     setHoverColor(color);
@@ -21,6 +22,14 @@ const Proof = () => {
 
   const handleMouseLeave = () => {
     setHoverColor("");
+  };
+
+  const handleButtonMouseEnter = (id) => {
+    setButtonHover((prevState) => ({ ...prevState, [id]: true }));
+  };
+
+  const handleButtonMouseLeave = (id) => {
+    setButtonHover((prevState) => ({ ...prevState, [id]: false }));
   };
 
   return (
@@ -37,16 +46,19 @@ const Proof = () => {
         />
         <TextContainer>
           <Title color={hoverColor}>Para todas as telas</Title>
-          <Text>
+          <Text color={hoverColor}>
             Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce ac.
           </Text>
-          <Button>
+          <Button
+            onMouseEnter={() => handleButtonMouseEnter("responsive")}
+            onMouseLeave={() => handleButtonMouseLeave("responsive")}
+          >
             Checar responsividade
             <Image
-              src="/arrow.svg"
+              src={buttonHover["responsive"] ? "/ArrowDark.svg" : "/arrow.svg"}
               width={20}
               height={20}
-              alt="Picture of the author"
+              alt="Arrow icon"
             />
           </Button>
         </TextContainer>
@@ -64,16 +76,19 @@ const Proof = () => {
         />
         <TextContainer>
           <Title color={hoverColor}>Design criativo</Title>
-          <Text>
+          <Text color={hoverColor}>
             Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce ac.
           </Text>
-          <Button>
+          <Button
+            onMouseEnter={() => handleButtonMouseEnter("design")}
+            onMouseLeave={() => handleButtonMouseLeave("design")}
+          >
             Ver design criativo
             <Image
-              src="/arrow.svg"
+              src={buttonHover["design"] ? "/ArrowDark.svg" : "/arrow.svg"}
               width={20}
               height={20}
-              alt="Picture of the author"
+              alt="Arrow icon"
             />
           </Button>
         </TextContainer>
@@ -91,16 +106,19 @@ const Proof = () => {
         />
         <TextContainer>
           <Title color={hoverColor}>Rápido e acessível</Title>
-          <Text>
+          <Text color={hoverColor}>
             Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce ac.
           </Text>
-          <Button>
+          <Button
+            onMouseEnter={() => handleButtonMouseEnter("speed")}
+            onMouseLeave={() => handleButtonMouseLeave("speed")}
+          >
             Ver análise de performance
             <Image
-              src="/arrow.svg"
+              src={buttonHover["speed"] ? "/ArrowDark.svg" : "/arrow.svg"}
               width={20}
               height={20}
-              alt="Picture of the author"
+              alt="Arrow icon"
             />
           </Button>
         </TextContainer>

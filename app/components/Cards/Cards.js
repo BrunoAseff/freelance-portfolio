@@ -104,8 +104,8 @@ export default function Cards() {
           <Container>
             <StyledImage
               src={cardData.imgSrc}
-              width={300}
-              height={200}
+              width={384}
+              height={192}
               alt="Picture of the author"
               className="card-image"
             />

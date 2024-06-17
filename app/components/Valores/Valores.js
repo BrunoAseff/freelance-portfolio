@@ -12,14 +12,14 @@ const Container = styled.div`
   flex-direction: column;
   position: relative;
   overflow-x: hidden;
-  min-height: 100vh; /* Ensure container is full height */
+  min-height: 100vh;
 `;
 
 const Title = styled.h1`
-  font-size: 3.3rem;
+  font-size: clamp(0.1rem, 3rem, 5rem);
   color: #f7ece1;
   margin: 5rem;
-  z-index: 1; /* Ensure it appears above the background */
+  z-index: 1;
 `;
 
 const Card = styled.div`
@@ -44,8 +44,8 @@ const Card = styled.div`
   }
 
   @media (max-width: 950px) {
-    flex: 1 1 70vw;
     height: 600px;
+    margin-bottom: 5vh;
   }
 `;
 
@@ -141,12 +141,14 @@ const Button = styled.button`
   text-align: center;
   border-radius: 6.25rem;
   border: solid 1px rgba(247, 236, 225, 0.5);
-  font-weight: 500;
+  font-weight: 600;
 
   &:hover {
+    transition: 0.3s;
     cursor: pointer;
     background: ${({ cor }) => cor || "#f7ece1"};
     color: #0e100f;
+    border: solid 1px #0e100f;
   }
 
   @media (max-width: 950px) {

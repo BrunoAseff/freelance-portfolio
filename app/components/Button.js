@@ -1,13 +1,14 @@
 import styled from "styled-components";
 
 export const Button = styled.button`
+  transition: 0.3s;
+  font-weight: 600;
   margin-top: 1rem;
   align-items: center;
   cursor: pointer;
   display: inline-flex;
   font-size: max(1rem, min(0.38835vw + 0.908981rem, 1.375rem));
-  font-weight: 600;
-  gap: 0.363636em;
+  gap: 0.5em;
   justify-content: center;
   letter-spacing: -0.01em;
   line-height: 1.04545;

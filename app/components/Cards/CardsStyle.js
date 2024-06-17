@@ -88,19 +88,10 @@ export const Card = styled.div`
   &::before {
     background: radial-gradient(
       800px circle at var(--mouse-x) var(--mouse-y),
-      rgba(247, 236, 225, 0.1),
-      transparent 40%
-    );
-    z-index: 3;
-  }
-
-  &::after {
-    background: radial-gradient(
-      600px circle at var(--mouse-x) var(--mouse-y),
       rgba(247, 236, 225, 0.2),
       transparent 40%
     );
-    z-index: 1;
+    z-index: 3;
   }
 
   @media (max-width: 650px) {

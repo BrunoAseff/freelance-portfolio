@@ -3,14 +3,12 @@ import Image from "next/image";
 
 export const Container = styled.div`
   border-top: 1px solid #f7ece1;
-
   border-bottom: 1px solid #f7ece1;
-
   padding: 5rem 2rem;
   display: flex;
   flex-direction: column;
   justify-content: center;
-  gap: 12rem;
+  gap: 5rem;
   align-items: center;
   text-align: center;
   @media (max-width: 768px) {
@@ -50,7 +48,16 @@ export const Title = styled.h1`
 export const Text = styled.p`
   font-size: clamp(0.5rem, 1.1rem, 1.3rem);
   text-align: center;
-  opacity: 0.7;
+  background-image: linear-gradient(
+    120deg,
+    ${(props) => props.color || "#F7ECE1"},
+    #f7ece1
+  );
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  -webkit-text-fill-color: transparent;
+  opacity: 0.9;
 `;
 
 export const SectionImage = styled(Image)`
