@@ -25,11 +25,11 @@ export const CardsContainer = styled.div`
   animation-delay: 2s;
   @media (max-width: 760px) {
     transform: scale(0.8);
-    padding: 30px;
-    border: rgba(247, 236, 225, 0.3) solid 1px;
+    height: 1000px;
+    padding: 0 30px;
+    border: rgba(247, 236, 225, 1) solid 1px;
     border-radius: 20px;
     overflow: scroll;
-    flex-wrap: wrap;
   }
 `;
 
@@ -172,5 +172,15 @@ export const Pallete = styled.div`
 
   @media (max-width: 650px) {
     left: 0%;
+  }
+`;
+
+export const SeeMore = styled.p`
+  font-size: 2rem;
+  color: #f7ece1;
+  opacity: 0.9;
+  display: none;
+  @media (max-width: 1000px) {
+    display: block;
   }
 `;

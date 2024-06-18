@@ -2,6 +2,7 @@
 
 import styled from "styled-components";
 import Image from "next/image";
+import { Button, ButtonColor } from "../components/Button";
 
 const Container = styled.div`
   display: flex;
@@ -36,7 +37,7 @@ const InsideContainer = styled.div`
   background: #e2eafc;
   padding: 0 10px;
   border-radius: 10px;
-  width: 100%; /* Ensure it takes full width */
+  width: 100%;
 `;
 
 const ImageContainer = styled.div`
@@ -60,6 +61,15 @@ const Color = styled.div`
 
 const P = styled.p`
   font-size: 1.3rem;
+`;
+
+const Buttons = styled.div`
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  min-width: 250px;
+  max-width: 35vw;
+  flex-shrink: 0;
 `;
 
 export default function Design() {
@@ -138,7 +148,15 @@ export default function Design() {
 
       <Card>
         <H1>Botões</H1>
-        {/* Add button content here */}
+        <Buttons>
+          <Button>Botão principal</Button>
+          <ButtonColor cor="#0AE448">Segundo botão</ButtonColor>
+          <ButtonColor cor="#00ACFF">Terceiro botão</ButtonColor>
+          <ButtonColor cor="#FF4564">Quarto botão</ButtonColor>
+        </Buttons>
+        <p style={{ fontStyle: "italic", color: "#9381ff" }}>
+          *Passe o mouse por cima ou clique
+        </p>
       </Card>
     </Container>
   );

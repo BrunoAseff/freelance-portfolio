@@ -11,6 +11,7 @@ import {
   Pallete,
   CardContent,
   Container,
+  SeeMore,
 } from "./CardsStyle.js";
 import { cardsData } from "./Items.js";
 
@@ -92,34 +93,38 @@ export default function Cards() {
   }, []);
 
   return (
-    <CardsContainer id="cards">
-      {cardsData.map((cardData, index) => (
-        <Card key={index} className="card">
-          <CardContent />
+    <>
+      <CardsContainer id="cards">
+        <SeeMore>Role para ver mais</SeeMore>
 
-          <CardTitle className="card-title">{cardData.title}</CardTitle>
-          <CardSubtitle className="card-title">
-            {cardData.subtitle}
-          </CardSubtitle>
-          <Container>
-            <StyledImage
-              src={cardData.imgSrc}
-              width={381}
-              height={190.5}
-              alt="Picture of the author"
-              className="card-image"
-            />
-            {cardData.pallete.map((palleteData, i) => (
-              <Pallete
-                key={i}
-                className="card-pallete"
-                color={palleteData.color}
-                top={palleteData.top}
+        {cardsData.map((cardData, index) => (
+          <Card key={index} className="card">
+            <CardContent />
+
+            <CardTitle className="card-title">{cardData.title}</CardTitle>
+            <CardSubtitle className="card-title">
+              {cardData.subtitle}
+            </CardSubtitle>
+            <Container>
+              <StyledImage
+                src={cardData.imgSrc}
+                width={381}
+                height={190.5}
+                alt="Picture of the author"
+                className="card-image"
               />
-            ))}
-          </Container>
-        </Card>
-      ))}
-    </CardsContainer>
+              {cardData.pallete.map((palleteData, i) => (
+                <Pallete
+                  key={i}
+                  className="card-pallete"
+                  color={palleteData.color}
+                  top={palleteData.top}
+                />
+              ))}
+            </Container>
+          </Card>
+        ))}
+      </CardsContainer>
+    </>
   );
 }

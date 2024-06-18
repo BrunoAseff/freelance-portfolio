@@ -118,7 +118,7 @@ const Proof = () => {
             Desempenho otimizado para acesso ágil e eficiente.
           </Text>
           <Link
-            href="https://pagespeed.web.dev/analysis/https-freelance-portfolio-orpin-xi-vercel-app/016gyemhwc?form_factor=desktop&category=performance&category=accessibility&category=best-practices&category=seo&hl=pt&utm_source=lh-chrome-ext"
+            href="https://pagespeed.web.dev/analysis/https-freelance-portfolio-orpin-xi-vercel-app/9yfemd889n?form_factor=desktop&category=performance&category=accessibility&category=best-practices&category=seo&hl=pt&utm_source=lh-chrome-ext"
             target="_blank"
           >
             <Button
