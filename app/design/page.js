@@ -5,50 +5,43 @@ import Image from "next/image";
 
 const Container = styled.div`
   display: flex;
-  width: 100%;
-  @media (max-width: 1000px) {
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-  }
+  flex-wrap: wrap;
+  align-items: center;
 `;
 
 const Card = styled.div`
-  position: absolute;
-  background: #f7ece1;
+  background: #edf2fb;
   padding: 1.5rem 3rem;
   border-radius: 20px;
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
-
-  @media (max-width: 1000px) {
-    position: static;
-    width: 50%;
-    margin: 1rem 0rem;
-  }
+  margin: 1rem;
+  flex: 1;
 `;
 
 const Pallete = styled.div`
   width: 20px;
   height: 20px;
   border-radius: 100%;
-  box-shadow: 0 0 0 5px #9d8189;
+  box-shadow: 0 0 0 5px #b6ccfe;
 `;
 
-const PalleteContainer = styled.div`
+const InsideContainer = styled.div`
   display: grid;
   grid-template-columns: 1fr 1fr;
   align-items: center;
   gap: 1rem;
   margin-bottom: 1rem;
-  background: #d6ccc2;
+  background: #e2eafc;
   padding: 0 10px;
   border-radius: 10px;
+  width: 100%; /* Ensure it takes full width */
 `;
 
 const ImageContainer = styled.div`
   display: flex;
+  flex-wrap: wrap;
   align-items: center;
   gap: 2rem;
   justify-content: center;
@@ -56,13 +49,17 @@ const ImageContainer = styled.div`
 
 const H1 = styled.h1`
   margin-top: 0;
-  color: #9a8c98;
+  color: #9381ff;
 `;
 
 const Color = styled.div`
   display: flex;
   align-items: center;
   gap: 0.8rem;
+`;
+
+const P = styled.p`
+  font-size: 1.3rem;
 `;
 
 export default function Design() {
@@ -75,55 +72,62 @@ export default function Design() {
   ];
   return (
     <Container>
-      <Card style={{ top: "10%" }}>
+      <Card>
         <H1>Cores</H1>
-        <PalleteContainer>
+        <InsideContainer>
           <p>Escuros:</p>
           <Color>
             <Pallete style={{ background: "#0E100F" }} />
             <p>#0E100F</p>
           </Color>
-        </PalleteContainer>
+        </InsideContainer>
 
-        <PalleteContainer>
+        <InsideContainer>
           <p>Claros:</p>
           <Color>
             <Pallete style={{ background: "#F7ECE1" }} />
             <p>#F7ECE1</p>
           </Color>
-        </PalleteContainer>
+        </InsideContainer>
 
-        <PalleteContainer>
+        <InsideContainer>
           <p>Cor principal:</p>
           <Color>
             <Pallete style={{ background: "#0AE448" }} />
             <p>#0AE448</p>
           </Color>
-        </PalleteContainer>
+        </InsideContainer>
 
-        <PalleteContainer>
-          <p>Cor secudária:</p>
+        <InsideContainer>
+          <p>Cor secundária:</p>
           <Color>
             <Pallete style={{ background: "#00ACFF" }} />
             <p>#00ACFF</p>
           </Color>
-        </PalleteContainer>
+        </InsideContainer>
 
-        <PalleteContainer>
+        <InsideContainer>
           <p>Cor de apoio:</p>
           <Color>
             <Pallete style={{ background: "#FF4564" }} />
             <p>#FF4564</p>
           </Color>
-        </PalleteContainer>
-      </Card>
-      <Card style={{ left: "30%", bottom: "10%" }}>
-        <H1>Tipografia</H1>
-        <p>Nunito</p>
-        <p>Sofia</p>
+        </InsideContainer>
       </Card>
 
-      <Card style={{ right: "10%", top: "10%" }}>
+      <Card>
+        <H1>Tipografia</H1>
+        <InsideContainer>
+          <p>Principal:</p>
+          <P>Nunito</P>
+        </InsideContainer>
+        <InsideContainer>
+          <p>Estilizada:</p>
+          <P style={{ fontFamily: "var(--font-sofia)" }}>Sofia</P>
+        </InsideContainer>
+      </Card>
+
+      <Card>
         <H1>Ícones</H1>
         <ImageContainer>
           {src.map((item, index) => (
@@ -132,8 +136,9 @@ export default function Design() {
         </ImageContainer>
       </Card>
 
-      <Card style={{ right: "10%", bottom: "10%" }}>
+      <Card>
         <H1>Botões</H1>
+        {/* Add button content here */}
       </Card>
     </Container>
   );
