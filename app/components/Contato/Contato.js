@@ -20,7 +20,7 @@ const Container = styled.div`
 const Title = styled.h1`
   font-size: clamp(0.1rem, 3rem, 5rem);
   color: #f7ece1;
-  margin: 0rem 1rem 10rem 1rem;
+  margin: 3rem 1rem 5rem 1rem;
   z-index: 1;
 `;
 

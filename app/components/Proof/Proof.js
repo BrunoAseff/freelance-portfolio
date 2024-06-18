@@ -85,10 +85,7 @@ const Proof = () => {
           <Text color={hoverColor}>
             Designs personalizados para destacar a sua marca.
           </Text>
-          <Link
-            href="https://codebeautify.org/responsive-website-tester?&URL=https://freelance-portfolio-orpin-xi.vercel.app/&Size=1&Scr=defaultSize"
-            target="_blank"
-          >
+          <Link href="/design" target="_blank">
             <Button
               onMouseEnter={() => handleButtonMouseEnter("design")}
               onMouseLeave={() => handleButtonMouseLeave("design")}
