@@ -32,7 +32,7 @@ export default function Cards() {
         });
         anime({
           targets: images,
-          translateX: -10,
+          translateX: -30,
           duration: 200,
           easing: "cubicBezier(.5, .05, .1, .3)",
         });
@@ -104,8 +104,8 @@ export default function Cards() {
           <Container>
             <StyledImage
               src={cardData.imgSrc}
-              width={384}
-              height={192}
+              width={381}
+              height={190.5}
               alt="Picture of the author"
               className="card-image"
             />

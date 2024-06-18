@@ -3,6 +3,7 @@
 import { useState } from "react";
 import { Button } from "../Button";
 import Image from "next/image";
+import Link from "next/link";
 import {
   Container,
   Section,
@@ -46,21 +47,26 @@ const Proof = () => {
         />
         <TextContainer>
           <Title color={hoverColor}>Para todas as telas</Title>
-          <Text color={hoverColor}>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce ac.
-          </Text>
-          <Button
-            onMouseEnter={() => handleButtonMouseEnter("responsive")}
-            onMouseLeave={() => handleButtonMouseLeave("responsive")}
+          <Text color={hoverColor}>Apareça bem em qualquer dispositivo.</Text>
+          <Link
+            href="https://codebeautify.org/responsive-website-tester?&URL=https://freelance-portfolio-orpin-xi.vercel.app/&Size=1&Scr=defaultSize"
+            target="_blank"
           >
-            Checar responsividade
-            <Image
-              src={buttonHover["responsive"] ? "/ArrowDark.svg" : "/arrow.svg"}
-              width={20}
-              height={20}
-              alt="Arrow icon"
-            />
-          </Button>
+            <Button
+              onMouseEnter={() => handleButtonMouseEnter("responsive")}
+              onMouseLeave={() => handleButtonMouseLeave("responsive")}
+            >
+              Checar responsividade
+              <Image
+                src={
+                  buttonHover["responsive"] ? "/arrowDark.svg" : "/arrow.svg"
+                }
+                width={20}
+                height={20}
+                alt="Arrow icon"
+              />
+            </Button>
+          </Link>
         </TextContainer>
       </Section>
 
@@ -77,20 +83,25 @@ const Proof = () => {
         <TextContainer>
           <Title color={hoverColor}>Design criativo</Title>
           <Text color={hoverColor}>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce ac.
+            Designs personalizados para destacar a sua marca.
           </Text>
-          <Button
-            onMouseEnter={() => handleButtonMouseEnter("design")}
-            onMouseLeave={() => handleButtonMouseLeave("design")}
+          <Link
+            href="https://codebeautify.org/responsive-website-tester?&URL=https://freelance-portfolio-orpin-xi.vercel.app/&Size=1&Scr=defaultSize"
+            target="_blank"
           >
-            Ver design criativo
-            <Image
-              src={buttonHover["design"] ? "/ArrowDark.svg" : "/arrow.svg"}
-              width={20}
-              height={20}
-              alt="Arrow icon"
-            />
-          </Button>
+            <Button
+              onMouseEnter={() => handleButtonMouseEnter("design")}
+              onMouseLeave={() => handleButtonMouseLeave("design")}
+            >
+              Ver design criativo
+              <Image
+                src={buttonHover["design"] ? "/arrowDark.svg" : "/arrow.svg"}
+                width={20}
+                height={20}
+                alt="Arrow icon"
+              />
+            </Button>
+          </Link>
         </TextContainer>
       </Section>
 
@@ -107,20 +118,25 @@ const Proof = () => {
         <TextContainer>
           <Title color={hoverColor}>Rápido e acessível</Title>
           <Text color={hoverColor}>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce ac.
+            Desempenho otimizado para acesso ágil e eficiente.
           </Text>
-          <Button
-            onMouseEnter={() => handleButtonMouseEnter("speed")}
-            onMouseLeave={() => handleButtonMouseLeave("speed")}
+          <Link
+            href="https://pagespeed.web.dev/analysis/https-freelance-portfolio-orpin-xi-vercel-app/016gyemhwc?form_factor=desktop&category=performance&category=accessibility&category=best-practices&category=seo&hl=pt&utm_source=lh-chrome-ext"
+            target="_blank"
           >
-            Ver análise de performance
-            <Image
-              src={buttonHover["speed"] ? "/ArrowDark.svg" : "/arrow.svg"}
-              width={20}
-              height={20}
-              alt="Arrow icon"
-            />
-          </Button>
+            <Button
+              onMouseEnter={() => handleButtonMouseEnter("speed")}
+              onMouseLeave={() => handleButtonMouseLeave("speed")}
+            >
+              Ver análise de performance
+              <Image
+                src={buttonHover["speed"] ? "/arrowDark.svg" : "/arrow.svg"}
+                width={20}
+                height={20}
+                alt="Arrow icon"
+              />
+            </Button>
+          </Link>
         </TextContainer>
       </Section>
     </Container>

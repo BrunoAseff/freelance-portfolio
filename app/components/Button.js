@@ -13,6 +13,7 @@ export const Button = styled.button`
   letter-spacing: -0.01em;
   line-height: 1.04545;
   overflow: hidden;
+  text-wrap: nowrap;
   padding: 1rem 3rem;
   position: relative;
   text-decoration: none;
@@ -32,6 +33,5 @@ export const Button = styled.button`
 
   @media (max-width: 950px) {
     width: 90%;
-    padding: 0.75rem 1rem;
   }
 `;

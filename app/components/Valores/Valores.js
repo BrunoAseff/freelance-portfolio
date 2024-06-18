@@ -34,17 +34,17 @@ const Card = styled.div`
   transition: border 0.3s ease;
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
   flex-shrink: 0;
   z-index: 1;
   margin-bottom: 20vh;
+  min-height: auto; /* Adjusted property */
 
   &:hover {
     border: solid 1px ${({ cor }) => cor || "#f7ece1"};
   }
 
   @media (max-width: 950px) {
-    height: 600px;
+    height: auto; /* Ensure card height adjusts on smaller screens */
     margin-bottom: 5vh;
   }
 `;
@@ -74,7 +74,7 @@ const Price = styled.p`
 const List = styled.ul`
   font-size: clamp(1rem, 2vw, 1rem);
   color: rgba(247, 236, 225, 0.7);
-  margin: 1rem 0 0 1.5rem;
+  margin: 0 0 0 1.5rem;
 `;
 
 const LiGreen = styled.li`
@@ -102,6 +102,7 @@ const LiRed = styled.li`
 `;
 
 const PriceDescription = styled.p`
+  max-width: 80%;
   width: 100%;
   font-size: clamp(1rem, 2vw, 1rem);
   color: rgba(247, 236, 225, 0.5);
@@ -109,8 +110,10 @@ const PriceDescription = styled.p`
 `;
 
 const ButtonContainer = styled.div`
+  height: 100%;
   display: flex;
   justify-content: center;
+  align-items: flex-end;
   margin: 60px 0;
 
   @media (max-width: 950px) {
@@ -142,6 +145,7 @@ const Button = styled.button`
   border-radius: 6.25rem;
   border: solid 1px rgba(247, 236, 225, 0.5);
   font-weight: 600;
+  margin-top: auto;
 
   &:hover {
     transition: 0.3s;
@@ -188,7 +192,9 @@ export default function Valores() {
         <Card cor="#0AE448">
           <P>Básico</P>
           <Price cor="#0AE448">R$200</Price>
-          <PriceDescription>Lorem ipsum fodkamdfasdfasd</PriceDescription>
+          <PriceDescription>
+            Para quem está começando no digital.
+          </PriceDescription>
           <List>
             <LiGreen>1 página de vendas</LiGreen>
             <LiGreen>layout personalizado</LiGreen>
@@ -206,9 +212,11 @@ export default function Valores() {
         <Card cor="#FF4564">
           <P>Pro</P>
           <Price cor="#FF4564">R$300</Price>
-          <PriceDescription>Lorem ipsum fodkamdfasdfasd</PriceDescription>
+          <PriceDescription>
+            Para empresas que querem crescer online.
+          </PriceDescription>
           <List>
-            <LiRed>Até 6 páginas</LiRed>
+            <LiRed>Até 10 páginas</LiRed>
             <LiRed>layout personalizado</LiRed>
             <LiRed>Responsivo</LiRed>
             <LiRed>Otimização de SEO</LiRed>
@@ -225,9 +233,11 @@ export default function Valores() {
         <Card cor="#00ACFF">
           <P cor="#00ACFF">Premium</P>
           <Price cor="#00ACFF">R$400</Price>
-          <PriceDescription>Lorem ipsum fodkamdfasdfasd</PriceDescription>
+          <PriceDescription>
+            Solução robusta para uma presença digital completa.
+          </PriceDescription>
           <List>
-            <LiBlue>Até 10 páginas</LiBlue>
+            <LiBlue>Mais de 10 páginas</LiBlue>
             <LiBlue>layout personalizado</LiBlue>
             <LiBlue>Responsivo</LiBlue>
             <LiBlue>Otimização de SEO</LiBlue>
@@ -236,7 +246,8 @@ export default function Valores() {
             <LiBlue>Google Analytics</LiBlue>
             <LiBlue>Facebook Pixel</LiBlue>
             <LiBlue>Formulário de cadastro</LiBlue>
-            <LiBlue>Integração com email</LiBlue>
+            <LiBlue>Integração com email (mailchimp)</LiBlue>
+            <LiBlue>Mapas de calor (Clarify)</LiBlue>
           </List>
           <ButtonContainer>
             <Button cor="#00ACFF">Escolher pacote</Button>

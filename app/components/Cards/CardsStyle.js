@@ -144,18 +144,12 @@ export const CardSubtitle = styled.p`
 
 export const StyledImage = styled(Image)`
   display: block;
-  width: 100%;
-
   margin: 0 1px 1px 0;
   position: relative;
   left: 30%;
   top: 40%;
   border-radius: 10px;
   box-shadow: 0 0 30px rgba(0, 0, 0, 1);
-  @media (max-width: 650px) {
-    width: 70%;
-    height: 70%;
-  }
 `;
 
 export const Container = styled.div`

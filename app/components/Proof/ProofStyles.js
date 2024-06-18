@@ -25,13 +25,12 @@ export const Section = styled.section`
     width: 90%;
     display: flex;
     border-radius: 20px;
-    border: 1px solid #f7ece1;
     flex-direction: column;
   }
 `;
 
 export const Title = styled.h1`
-  font-size: clamp(0.1rem, 3rem, 5rem);
+  font-size: clamp(1.5rem, 6vw, 3rem); /* Adjust the values as needed */
   background-image: linear-gradient(
     120deg,
     ${(props) => props.color || "#F7ECE1"},
@@ -46,8 +45,8 @@ export const Title = styled.h1`
 `;
 
 export const Text = styled.p`
-  font-size: clamp(0.5rem, 1.1rem, 1.3rem);
-  text-align: center;
+  font-size: clamp(0.8rem, 4vw, 1.2rem); /* Adjust the values as needed */
+  text-align: left;
   background-image: linear-gradient(
     120deg,
     ${(props) => props.color || "#F7ECE1"},
@@ -69,8 +68,7 @@ export const SectionImage = styled(Image)`
   box-shadow: 0px 0px 150px 1px rgba(247, 236, 225, 0.1);
 
   &:hover {
-    cursor: pointer;
-    scale: 1.1;
+    scale: 1.05;
     transition: 0.5s;
     box-shadow: 0px 0px 150px 1px
       ${(props) => props.color || "rgba(247, 236, 225, 0.2)"};

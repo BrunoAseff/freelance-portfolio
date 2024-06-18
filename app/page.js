@@ -4,6 +4,7 @@ import Cards from "./components/Cards/Cards";
 import Valores from "./components/Valores/Valores";
 import Proof from "./components/Proof/Proof";
 import Contato from "./components/Contato/Contato";
+import BrunoAseff from "./components/BrunoAseff";
 
 export default function Page() {
   return (
@@ -45,6 +46,7 @@ export default function Page() {
         <div id="contato">
           <Contato />
         </div>
+        <BrunoAseff />
       </div>
     </>
   );
