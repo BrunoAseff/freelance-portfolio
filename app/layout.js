@@ -1,7 +1,7 @@
 import { Sofia } from "next/font/google";
 import { Nunito } from "next/font/google";
 import StyledComponentsRegistry from "./lib/registry";
-import { SpeedInsights } from "@vercel/speed-insights/next";
+
 export const metadata = {
   title: "Bruno Aseff",
   description: "Portifolio de Bruno Aseff",
@@ -27,7 +27,6 @@ export default function RootLayout({ children }) {
     <html lang="en">
       <body className={`${nunito.className} ${sofia.variable}`}>
         <StyledComponentsRegistry>{children}</StyledComponentsRegistry>
-        <SpeedInsights />
       </body>
     </html>
   );
