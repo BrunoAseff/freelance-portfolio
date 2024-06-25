@@ -14,15 +14,14 @@ const GlobalStyles = createGlobalStyle`
     color: #595758;
   }
 
-  body {
-    background-image: linear-gradient(
-      to top,
-      #FFE5D9,
-      white
-    );
-    background-repeat: no-repeat;
-    background-attachment: fixed;
+  :root {
+    --light: #ffe8ea;
+    --second: #ff99ac;
+    --pink: #f2a172;
+    --text: rgb(89,87,88);
+  
   }
+  
 `;
 
 export default GlobalStyles;

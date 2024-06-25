@@ -1,7 +1,6 @@
 "use client";
 
 import Image from "next/image";
-
 import styled, { keyframes } from "styled-components";
 
 export const Container = styled.div`
@@ -75,20 +74,21 @@ export const HeroSection = styled.div`
 
 export const HeroTitle = styled.h1`
   font-size: clamp(2rem, 2vw + 1rem, 3rem);
-  font-family: var(--font-playfair);
+  font-family: var(--font-bitter);
 `;
 
 export const Button = styled.button`
   border-radius: 15px;
-  border: 1px solid #595758;
-  background-color: transparent;
+  border: 2px solid transparent;
+  background-color: rgb(89, 87, 88);
+  color: white;
   font-size: 1.3rem;
   padding: 10px 15px;
   margin: 20px;
+
   &:hover {
     cursor: pointer;
-    background-color: white;
-    transition: 0.5s;
+    transition: 0.3s;
   }
 `;
 
@@ -101,21 +101,21 @@ export const HeroImage = styled(Image)`
 `;
 
 export const RightBlob = styled.div`
-  background-image: radial-gradient(#f2a172, #f2a172);
-  opacity: 0.5;
+  background-image: radial-gradient(var(--pink), var(--pink));
+  opacity: 0.3;
   top: -50%;
-  right: -20%;
+  right: -10%;
   position: fixed;
-  width: 500px;
-  height: 700px;
+  width: 50%;
+  height: 900px;
   border-radius: 100%;
   filter: blur(100px);
   z-index: -1;
 `;
 
 export const LeftBlob = styled.div`
-  background-image: linear-gradient(to top, #f2ceae, white);
-  opacity: 1;
+  background-image: linear-gradient(to top, var(--pink), white);
+  opacity: 0.4;
   left: -20%;
   bottom: -10%;
   position: fixed;
@@ -126,90 +126,51 @@ export const LeftBlob = styled.div`
   z-index: -1;
 `;
 
-export const ProcSection = styled.div`
-  margin-top: 200px;
+export const ProcContainer = styled.div`
   display: flex;
+  flex-wrap: wrap;
   justify-content: center;
   align-items: center;
-  width: 100%;
-  box-sizing: border-box;
-`;
-
-export const ProcContainer = styled.div`
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  grid-template-rows: repeat(2, 1fr);
-  gap: 10px;
-  justify-content: center;
-  align-content: center;
-  width: 40%;
+  margin-top: 100px;
+  width: 90%;
   padding: 20px;
   box-sizing: border-box;
-
-  @media (max-width: 600px) {
-    grid-template-columns: 1fr;
-    grid-template-rows: repeat(4, 1fr);
-  }
+  min-width: 400px;
 `;
 
 export const ProcCard = styled.div`
+  box-shadow: 0 0 200px 0.1px var(--second);
   display: flex;
-  flex-direction: column;
-  min-width: 350px;
-  min-height: 300px;
-  max-width: 500px;
-  max-height: 450px;
+  min-width: 250px;
+  max-width: 600px;
+  height: 200px;
   background-color: white;
+  align-items: center;
   padding: 30px;
-  flex: 1 1 300px;
+  margin: 10px;
+  border: solid 0.7px transparent;
+  border-radius: 15px;
+  text-align: left;
+  width: 50px;
 
   &.top-right {
-    text-align: left;
-    border-top-right-radius: 50%;
-    background-image: url("mesh.png");
-    border: solid 1px transparent;
-
-    &:hover {
-      cursor: pointer;
-      border: solid 1px #595758;
-    }
+    width: 100px;
   }
 
   &.top-left {
     text-align: right;
-    border-top-left-radius: 50%;
-    background-image: url("mesh2.png");
-    border: solid 1px transparent;
-
-    &:hover {
-      cursor: pointer;
-      border: solid 1px #595758;
-    }
+    width: 600px;
   }
 
-  &.bottom-left {
-    text-align: right;
-    border-bottom-left-radius: 50%;
-    background-image: url("mesh3.png");
-    border: solid 1px transparent;
-
-    &:hover {
-      cursor: pointer;
-      border: solid 1px #595758;
-    }
+  &:hover {
+    cursor: pointer;
+    border: solid 0.7px var(--text);
   }
+`;
 
-  &.bottom-right {
-    border-bottom-right-radius: 50%;
-    border: solid 1px transparent;
-
-    background-image: url("mesh4.png");
-
-    &:hover {
-      cursor: pointer;
-      border: solid 1px #595758;
-    }
-  }
+export const TextWrapper = styled.div`
+  display: flex;
+  flex-direction: column;
 `;
 
 export const ProcText = styled.h1`
@@ -218,4 +179,10 @@ export const ProcText = styled.h1`
 
 export const ProcSubtitle = styled.p`
   font-size: 1rem;
+`;
+
+export const ProcImage = styled(Image)`
+  border-top-left-radius: 50%;
+  border-top-right-radius: 50%;
+  border: 1px solid #595758;
 `;

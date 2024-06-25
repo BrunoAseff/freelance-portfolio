@@ -1,4 +1,4 @@
-import { Playfair_Display, Sofia } from "next/font/google";
+import { Bitter, Sofia } from "next/font/google";
 import { Nunito } from "next/font/google";
 import StyledComponentsRegistry from "./lib/registry";
 
@@ -22,17 +22,17 @@ const nunito = Nunito({
   variable: "--font-nunito",
 });
 
-const Playfair = Playfair_Display({
+const asap = Bitter({
   subsets: ["latin"],
-  weight: ["400", "600"],
-  variable: "--font-playfair",
+  weight: ["300"],
+  variable: "--font-bitter",
 });
 
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <body
-        className={`${nunito.className} ${sofia.variable} ${Playfair.variable}`}
+        className={`${nunito.className} ${sofia.variable} ${asap.variable}`}
       >
         <StyledComponentsRegistry>{children}</StyledComponentsRegistry>
       </body>

@@ -11,12 +11,14 @@ import {
   HeroImage,
   LeftBlob,
   RightBlob,
-  ProcSection,
+  GlobalStyle,
   ProcContainer,
   ProcText,
   ProcSubtitle,
   ProcCard,
   Button,
+  TextWrapper,
+  ProcImage,
 } from "./style.js";
 import GlobalStyles from "./GlobalStyles.js";
 
@@ -24,6 +26,7 @@ export default function Estetica() {
   return (
     <>
       <GlobalStyles />
+
       <RightBlob />
       <LeftBlob />
       <Container>
@@ -55,42 +58,64 @@ export default function Estetica() {
             alt="Picture of the author"
           />
         </HeroSection>
-        <ProcSection>
-          <ProcContainer>
-            <ProcCard className="top-left">
+        <ProcContainer>
+          <ProcCard className="top-left">
+            <ProcImage
+              src="/botox.png"
+              width={150}
+              height={150}
+              alt="Picture of the author"
+            />
+            <TextWrapper>
               <ProcText>Toxína Botulínica</ProcText>
               <ProcSubtitle>
                 Lorem Ipsum is simply dummy text of the printing and typesetting
                 industry. Lorem Ipsum has been the industry's standard dummy
                 text ever since the 1500s
               </ProcSubtitle>
-            </ProcCard>
-            <ProcCard className="top-right">
+            </TextWrapper>
+          </ProcCard>
+          <ProcCard className="top-right">
+            <TextWrapper>
               <ProcText>Preenchimento</ProcText>
               <ProcSubtitle>
                 Lorem Ipsum is simply dummy text of the printing and typesetting
                 industry. Lorem Ipsum has been the industry's standard dummy
                 text ever since the 1500s
               </ProcSubtitle>
-            </ProcCard>
-            <ProcCard className="bottom-left">
+            </TextWrapper>
+          </ProcCard>
+          <ProcCard className="bottom-left">
+            <TextWrapper>
               <ProcText>Toxína Botulínica</ProcText>
               <ProcSubtitle>
                 Lorem Ipsum is simply dummy text of the printing and typesetting
                 industry. Lorem Ipsum has been the industry's standard dummy
                 text ever since the 1500s
               </ProcSubtitle>
-            </ProcCard>
-            <ProcCard className="bottom-right">
+            </TextWrapper>
+          </ProcCard>
+          <ProcCard className="bottom-middle">
+            <TextWrapper>
               <ProcText>Preenchimento</ProcText>
               <ProcSubtitle>
                 Lorem Ipsum is simply dummy text of the printing and typesetting
                 industry. Lorem Ipsum has been the industry's standard dummy
                 text ever since the 1500s
               </ProcSubtitle>
-            </ProcCard>
-          </ProcContainer>
-        </ProcSection>
+            </TextWrapper>
+          </ProcCard>
+          <ProcCard className="bottom-right">
+            <TextWrapper>
+              <ProcText>Preenchimento</ProcText>
+              <ProcSubtitle>
+                Lorem Ipsum is simply dummy text of the printing and typesetting
+                industry. Lorem Ipsum has been the industry's standard dummy
+                text ever since the 1500s
+              </ProcSubtitle>
+            </TextWrapper>
+          </ProcCard>
+        </ProcContainer>
       </Container>
     </>
   );
