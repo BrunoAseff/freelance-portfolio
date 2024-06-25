@@ -48,12 +48,16 @@ export const Nav = styled.div`
 
   @media (max-width: 768px) {
     position: fixed;
-    top: 0;
-    left: -250px; /* Hidden by default */
-    width: 250px;
+    top: 5%;
+    left: -230px;
+    width: 230px;
     height: 100%;
-    background-color: white; /* Adjust as needed */
+    background-color: white;
     transition: left 0.3s;
+    z-index: 99;
+    border: 1px solid #595758;
+    border-radius: 10px;
+    border-left: none;
   }
 `;
 
@@ -105,7 +109,6 @@ export const A = styled.a`
   color: inherit;
 `;
 
-// Additional styles for the button to toggle the sidebar
 export const ToggleButton = styled.button`
   display: none;
 
@@ -116,8 +119,10 @@ export const ToggleButton = styled.button`
     left: 1rem;
     z-index: 1000;
     color: black;
-    scale: 1.1;
-    background: transparent;
+    scale: 1.5;
+    background: white;
+    border-radius: 5px;
+    border: 0.5px solid #595758;
   }
 `;
 
@@ -131,14 +136,18 @@ export const HeroSection = styled.div`
   width: 80%;
   margin-top: 5%;
   @media (max-width: 1000px) {
-    grid-template-columns: 1fr;
     text-align: center;
+    margin-top: 20%;
   }
 `;
 
 export const HeroTitle = styled.h1`
   font-size: clamp(2rem, 2vw + 1rem, 3rem);
   font-family: var(--font-bitter);
+  @media (max-width: 1000px) {
+    font-size: 1.2rem;
+    padding: 10px;
+  }
 `;
 
 export const Button = styled.button`
@@ -153,6 +162,12 @@ export const Button = styled.button`
   transition: all 0.5s;
   cursor: pointer;
   margin-bottom: 20px;
+
+  @media (max-width: 1000px) {
+    font-size: 14px;
+    padding: 10px;
+    display: none;
+  }
 
   &:hover span {
     padding-right: 15px;
@@ -200,6 +215,9 @@ export const ProcContainer = styled.div`
   padding: 20px;
   box-sizing: border-box;
   min-width: 400px;
+  @media (max-width: 1000px) {
+    margin-top: 10px;
+  }
 `;
 
 export const ProcCard = styled.div`
@@ -221,6 +239,7 @@ export const ProcCard = styled.div`
   @media (max-width: 1000px) {
     flex-direction: column;
     text-align: center;
+    font-size: 1.2rem;
   }
   &.top-right {
     width: 100px;
@@ -229,6 +248,11 @@ export const ProcCard = styled.div`
   &.top-left {
     text-align: right;
     width: 600px;
+    @media (max-width: 1000px) {
+      text-align: center;
+      max-width: 30%;
+      margin-top: 40px;
+    }
   }
 
   &:hover {
