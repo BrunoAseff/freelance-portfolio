@@ -117,12 +117,12 @@ export const ToggleButton = styled.button`
     position: fixed;
     top: 1rem;
     left: 1rem;
+    padding: 3px 5px;
     z-index: 1000;
-    color: black;
     scale: 1.5;
     background: white;
     border-radius: 5px;
-    border: 0.5px solid #595758;
+    border: 1px solid #595758;
   }
 `;
 
@@ -135,9 +135,9 @@ export const HeroSection = styled.div`
   justify-items: center;
   width: 80%;
   margin-top: 5%;
-  @media (max-width: 1000px) {
+  @media (max-width: 768px) {
     text-align: center;
-    margin-top: 20%;
+    margin-top: 15%;
   }
 `;
 
@@ -152,8 +152,8 @@ export const HeroTitle = styled.h1`
 
 export const Button = styled.button`
   display: inline-block;
-  border-radius: 15px;
-  background-color: rgb(89, 87, 88);
+  border-radius: 10px;
+  background-color: black;
   border: none;
   color: white;
   text-align: center;
@@ -166,7 +166,8 @@ export const Button = styled.button`
   @media (max-width: 1000px) {
     font-size: 14px;
     padding: 10px;
-    display: none;
+    position: absolute;
+    left: 15%;
   }
 
   &:hover span {
@@ -209,12 +210,15 @@ export const ProcContainer = styled.div`
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
+  position: relative;
   align-items: center;
   margin-top: 100px;
   width: 90%;
   padding: 20px;
   box-sizing: border-box;
   min-width: 400px;
+  max-width: 1350px;
+
   @media (max-width: 1000px) {
     margin-top: 10px;
   }
@@ -239,7 +243,10 @@ export const ProcCard = styled.div`
   @media (max-width: 1000px) {
     flex-direction: column;
     text-align: center;
+    justify-content: center;
+    height: 350px;
     font-size: 1.2rem;
+    margin-top: 40px;
   }
   &.top-right {
     width: 100px;
@@ -248,10 +255,10 @@ export const ProcCard = styled.div`
   &.top-left {
     text-align: right;
     width: 600px;
+
     @media (max-width: 1000px) {
       text-align: center;
-      max-width: 30%;
-      margin-top: 40px;
+      width: 50px;
     }
   }
 
@@ -278,6 +285,9 @@ export const ProcSubtitle = styled.p`
 export const ProcImage = styled(Image)`
   border-top-left-radius: 50%;
   border-top-right-radius: 50%;
+  margin: 10px;
+  width: clamp(100px, 12vw, 120px);
+  height: auto;
   border: 1px solid #595758;
 `;
 
@@ -285,17 +295,14 @@ export const Gif = styled(Image)`
   position: absolute;
   top: 5%;
   right: 5%;
+  @media (max-width: 1000px) {
+    margin-right: 0;
+    width: 30%;
+    height: auto;
+  }
 `;
 
 // SOBRE MIM
-
-export const AboutSection = styled.div`
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 100%;
-  margin-bottom: 100px;
-`;
 
 export const AboutCard = styled.div`
   padding: 50px;
@@ -306,6 +313,7 @@ export const AboutCard = styled.div`
   align-items: center;
   text-align: center;
   position: relative;
+  margin: 100px 0;
   width: 60%;
   border-radius: 20px;
   border: 1px solid #595758;
@@ -323,13 +331,14 @@ export const AboutImage = styled(Image)`
 // MAPA
 
 export const MapSection = styled.div`
-  margin: 100px 0;
+  margin-bottom: 100px;
   display: flex;
   width: 90%;
   align-items: center;
   justify-content: center;
   @media (max-width: 1000px) {
     flex-direction: column;
+    gap: 3rem;
     text-align: center;
     width: 100%;
   }
@@ -341,7 +350,6 @@ export const MapText = styled.div`
   @media (max-width: 1000px) {
     margin-right: 0;
     max-width: 100%;
-
     width: 100%;
   }
 `;
@@ -349,4 +357,7 @@ export const MapText = styled.div`
 export const Map = styled.iframe`
   border-radius: 15px;
   max-width: 90%;
+  box-shadow: 0 0 130px 0.5px var(--second);
 `;
+
+//DEPOIMENTOS

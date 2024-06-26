@@ -24,10 +24,10 @@ import {
   MapSection,
   MapText,
   AboutCard,
-  AboutSection,
   AboutImage,
   ToggleButton,
 } from "./style.js";
+import Depoimentos from "./Depoimentos.js";
 import GlobalStyles from "./GlobalStyles.js";
 import Image from "next/image.js";
 import { useState } from "react";
@@ -141,6 +141,33 @@ export default function Estetica() {
             </TextWrapper>
           </ProcCard>
         </ProcContainer>
+        <AboutCard>
+          <AboutImage
+            src="/estetica-mulher.png"
+            width={100}
+            height={100}
+            alt="Picture of the author"
+          />
+          <h1>Sobre mim</h1>
+          <p>
+            {" "}
+            Lorem Ipsum is simply dummy text of the printing and typesetting
+            industry. Lorem Ipsum has been the industry's standard dummy text
+            ever since the 1500s.
+          </p>
+          <p>
+            {" "}
+            Lorem Ipsum is simply dummy text of the printing and typesetting
+            industry. Lorem Ipsum has been the industry's standard dummy text
+            ever since the 1500s.
+          </p>
+          <p>
+            {" "}
+            Lorem Ipsum is simply dummy text of the printing and typesetting
+            industry. Lorem Ipsum has been the industry's standard dummy text
+            ever since the 1500s.
+          </p>
+        </AboutCard>
         <MapSection>
           <MapText>
             <Image
@@ -165,35 +192,7 @@ export default function Estetica() {
             referrerpolicy="no-referrer-when-downgrade"
           ></Map>
         </MapSection>
-        <AboutSection>
-          <AboutCard>
-            <AboutImage
-              src="/estetica-mulher.png"
-              width={100}
-              height={100}
-              alt="Picture of the author"
-            />
-            <h1>Sobre mim</h1>
-            <p>
-              {" "}
-              Lorem Ipsum is simply dummy text of the printing and typesetting
-              industry. Lorem Ipsum has been the industry's standard dummy text
-              ever since the 1500s.
-            </p>
-            <p>
-              {" "}
-              Lorem Ipsum is simply dummy text of the printing and typesetting
-              industry. Lorem Ipsum has been the industry's standard dummy text
-              ever since the 1500s.
-            </p>
-            <p>
-              {" "}
-              Lorem Ipsum is simply dummy text of the printing and typesetting
-              industry. Lorem Ipsum has been the industry's standard dummy text
-              ever since the 1500s.
-            </p>
-          </AboutCard>
-        </AboutSection>
+        <Depoimentos />
       </Container>
     </>
   );
