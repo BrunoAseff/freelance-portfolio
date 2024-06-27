@@ -76,6 +76,7 @@ export const Li = styled.li`
   display: flex;
   position: relative;
   text-decoration: none;
+  cursor: pointer;
 
   &:hover {
     &::before {
@@ -87,6 +88,20 @@ export const Li = styled.li`
       height: 1.5px;
       background-color: #595758;
       animation: ${underlineAnimation} 0.3s forwards;
+    }
+
+    &::after {
+      content: "";
+      position: absolute;
+      top: -5px;
+      right: -20px;
+      width: 20px;
+      height: 20px;
+      background-image: url("/sparkleBlack.svg");
+      background-size: cover;
+      background-repeat: no-repeat;
+      scale: 0.6;
+      transition: 0.5s;
     }
   }
 `;
@@ -134,6 +149,7 @@ export const HeroSection = styled.div`
   align-items: center;
   justify-items: center;
   width: 80%;
+  max-width: 1200px;
   margin-top: 5%;
   @media (max-width: 768px) {
     text-align: center;
@@ -142,12 +158,19 @@ export const HeroSection = styled.div`
 `;
 
 export const HeroTitle = styled.h1`
+  position: relative;
   font-size: clamp(2rem, 2vw + 1rem, 3rem);
-  font-family: var(--font-bitter);
+  font-family: var(--font-playfair);
   @media (max-width: 1000px) {
     font-size: 1.2rem;
     padding: 10px;
   }
+`;
+
+export const SpecialWord = styled.span`
+  font-family: var(--font-sofia), sans-serif;
+  color: #ff99ac;
+  font-style: italic;
 `;
 
 export const Button = styled.button`
@@ -196,14 +219,30 @@ export const ButtonSpan = styled.span`
   }
 `;
 
+export const ImageContainer = styled.div`
+  position: relative;
+`;
+
 export const HeroImage = styled(Image)`
   border-top-left-radius: 50%;
   border-top-right-radius: 50%;
   border: 1px solid #595758;
-  width: clamp(150px, 30vw, 300px);
+  width: clamp(100px, 28vw, 300px);
   height: auto;
 `;
 
+export const HeroIcon = styled(Image)`
+  position: absolute;
+  right: 10%;
+  @media (max-width: 700px) {
+    scale: 0.7;
+    right: 5%;
+  }
+  @media (max-width: 600px) {
+    scale: 0.7;
+    right: 0;
+  }
+`;
 // PROCEDIMENTOS
 
 export const ProcContainer = styled.div`
@@ -265,6 +304,7 @@ export const ProcCard = styled.div`
   &:hover {
     cursor: pointer;
     transition: 0.2s;
+    z-index: 1;
     border: solid 0.7px #595758;
   }
 `;
@@ -291,17 +331,6 @@ export const ProcImage = styled(Image)`
   border: 1px solid #595758;
 `;
 
-export const Gif = styled(Image)`
-  position: absolute;
-  top: 5%;
-  right: 5%;
-  @media (max-width: 1000px) {
-    margin-right: 0;
-    width: 30%;
-    height: auto;
-  }
-`;
-
 // SOBRE MIM
 
 export const AboutCard = styled.div`
@@ -315,6 +344,7 @@ export const AboutCard = styled.div`
   position: relative;
   margin: 100px 0;
   width: 60%;
+  max-width: 700px;
   border-radius: 20px;
   border: 1px solid #595758;
 `;
@@ -331,7 +361,7 @@ export const AboutImage = styled(Image)`
 // MAPA
 
 export const MapSection = styled.div`
-  margin-bottom: 100px;
+  margin: 100px 0;
   display: flex;
   width: 90%;
   align-items: center;
@@ -360,4 +390,23 @@ export const Map = styled.iframe`
   box-shadow: 0 0 130px 0.5px var(--second);
 `;
 
-//DEPOIMENTOS
+//ENTRE EM CONTATO
+
+export const ContactSection = styled.div`
+  margin-bottom: 100px;
+  align-items: center;
+  justify-content: center;
+`;
+
+export const ContactTitle = styled.h1`
+  margin-top: 100px;
+  margin-bottom: 0;
+  font-size: 3rem;
+  color: var(--second);
+`;
+
+export const ContactSubtitle = styled.p`
+  font-size: 1rem;
+  margin-bottom: 20px;
+  padding: 0 40px;
+`;

@@ -2,6 +2,7 @@
 
 import {
   HeroTitle,
+  SpecialWord,
   Container,
   Li,
   A,
@@ -26,6 +27,11 @@ import {
   AboutCard,
   AboutImage,
   ToggleButton,
+  HeroIcon,
+  ImageContainer,
+  ContactTitle,
+  ContactSubtitle,
+  ContactSection,
 } from "./style.js";
 import Depoimentos from "./Depoimentos.js";
 import GlobalStyles from "./GlobalStyles.js";
@@ -65,17 +71,28 @@ export default function Estetica() {
         </Nav>
         <HeroSection>
           <div>
-            <HeroTitle>Abrindo janelas para uma autoestima renovada.</HeroTitle>
+            <HeroTitle>
+              Abrindo <SpecialWord>janelas</SpecialWord> para uma autoestima
+              renovada.
+            </HeroTitle>
             <Button>
               <ButtonSpan>Entrar em contato</ButtonSpan>
             </Button>
           </div>
-          <HeroImage
-            src="/mulher.jpeg"
-            width={390}
-            height={390}
-            alt="Picture of the author"
-          />
+          <ImageContainer>
+            <HeroImage
+              src="/mulher.jpeg"
+              width={390}
+              height={390}
+              alt="Picture of the author"
+            />
+            <HeroIcon
+              src="/sparkle.svg"
+              width={50}
+              height={50}
+              alt="Picture of the author"
+            />
+          </ImageContainer>
         </HeroSection>
         <ProcContainer>
           <ProcCard className="top-left">
@@ -83,14 +100,13 @@ export default function Estetica() {
               src="/botox.png"
               width={150}
               height={150}
-              alt="Picture of the author"
+              alt="Imagem de botox"
             />
             <TextWrapper>
               <ProcText>Toxína Botulínica</ProcText>
               <ProcSubtitle>
-                Lorem Ipsum is simply dummy text of the printing and typesetting
-                industry. Lorem Ipsum has been the industry's standard dummy
-                text ever since the 1500s
+                Reduza rugas e linhas de expressão com nosso tratamento de
+                toxina botulínica.
               </ProcSubtitle>
             </TextWrapper>
           </ProcCard>
@@ -98,76 +114,66 @@ export default function Estetica() {
             <TextWrapper>
               <ProcText>Preenchimento</ProcText>
               <ProcSubtitle>
-                Lorem Ipsum is simply dummy text of the printing and typesetting
-                industry. Lorem Ipsum has been the industry's standard dummy
-                text ever since the 1500s
+                Recupere o volume facial perdido e suavize suas rugas com nosso
+                tratamento de preenchimento.
               </ProcSubtitle>
             </TextWrapper>
           </ProcCard>
           <ProcCard className="bottom-left">
             <TextWrapper>
-              <ProcText>Toxína Botulínica</ProcText>
+              <ProcText>Peeling</ProcText>
               <ProcSubtitle>
-                Lorem Ipsum is simply dummy text of the printing and typesetting
-                industry. Lorem Ipsum has been the industry's standard dummy
-                text ever since the 1500s
+                Renove sua pele e obtenha uma aparência mais jovem com nosso
+                tratamento de peeling.
               </ProcSubtitle>
             </TextWrapper>
           </ProcCard>
           <ProcCard className="bottom-middle">
             <TextWrapper>
-              <ProcText>Preenchimento</ProcText>
+              <ProcText>Sculptra</ProcText>
               <ProcSubtitle>
-                Lorem Ipsum is simply dummy text of the printing and typesetting
-                industry. Lorem Ipsum has been the industry's standard dummy
-                text ever since the 1500s
+                Restaure o volume facial naturalmente com Sculptra e redescubra
+                sua juventude.
               </ProcSubtitle>
             </TextWrapper>
           </ProcCard>
           <ProcCard className="bottom-right">
             <TextWrapper>
-              <ProcText>Preenchimento</ProcText>
-              <Gif
-                src="/sparkles.gif"
-                width={70}
-                height={70}
-                alt="Picture of the author"
-              />
+              <ProcText>Bioestimuladores de colágeno</ProcText>
+
               <ProcSubtitle>
-                Lorem Ipsum is simply dummy text of the printing and typesetting
-                industry. Lorem Ipsum has been the industry's standard dummy
-                text ever since the 1500s
+                Estimule a produção de colágeno e revitalize sua pele com nossos
+                bioestimuladores.
               </ProcSubtitle>
             </TextWrapper>
           </ProcCard>
         </ProcContainer>
         <AboutCard>
           <AboutImage
-            src="/estetica-mulher.png"
+            src="/estetica-mulher-1.png"
             width={100}
             height={100}
-            alt="Picture of the author"
+            alt="Imagem da estética feminina"
           />
           <h1>Sobre mim</h1>
           <p>
-            {" "}
-            Lorem Ipsum is simply dummy text of the printing and typesetting
-            industry. Lorem Ipsum has been the industry's standard dummy text
-            ever since the 1500s.
+            Eu sou [Seu Nome], especialista em procedimentos estéticos que
+            transformam e rejuvenescem. Com uma abordagem personalizada, estou
+            aqui para ajudar você a alcançar seus objetivos estéticos com
+            segurança e resultados excepcionais.
           </p>
           <p>
-            {" "}
-            Lorem Ipsum is simply dummy text of the printing and typesetting
-            industry. Lorem Ipsum has been the industry's standard dummy text
-            ever since the 1500s.
+            Explore nossos tratamentos e descubra como podemos revitalizar sua
+            aparência, proporcionando uma pele mais radiante e jovem.
           </p>
           <p>
-            {" "}
-            Lorem Ipsum is simply dummy text of the printing and typesetting
-            industry. Lorem Ipsum has been the industry's standard dummy text
-            ever since the 1500s.
+            Marque sua consulta hoje mesmo e dê o primeiro passo rumo a uma
+            versão mais confiante de si mesmo(a).
           </p>
         </AboutCard>
+
+        <Depoimentos />
+
         <MapSection>
           <MapText>
             <Image
@@ -192,7 +198,10 @@ export default function Estetica() {
             referrerpolicy="no-referrer-when-downgrade"
           ></Map>
         </MapSection>
-        <Depoimentos />
+        <ContactSection>
+          <ContactTitle>Entre em contato</ContactTitle>
+          <ContactSubtitle>Blablabla</ContactSubtitle>
+        </ContactSection>
       </Container>
     </>
   );
