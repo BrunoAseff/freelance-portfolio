@@ -56,16 +56,16 @@ export default function Estetica() {
         <Nav style={{ left: isSidebarOpen ? "0" : "-250px" }}>
           <Ul>
             <Li>
-              <A href="#">Procedimentos</A>
+              <A href="#proc">Procedimentos</A>
             </Li>
             <Li>
-              <A href="#">Sobre mim</A>
+              <A href="#about">Sobre mim</A>
             </Li>
             <Li>
-              <A href="#">Depoimentos</A>
+              <A href="#dep">Depoimentos</A>
             </Li>
             <Li>
-              <A href="#">Contato</A>
+              <A href="#contact">Contato</A>
             </Li>
           </Ul>
         </Nav>
@@ -94,7 +94,7 @@ export default function Estetica() {
             />
           </ImageContainer>
         </HeroSection>
-        <ProcContainer>
+        <ProcContainer id="proc">
           <ProcCard className="top-left">
             <ProcImage
               src="/botox.png"
@@ -155,7 +155,7 @@ export default function Estetica() {
             height={100}
             alt="Imagem da estética feminina"
           />
-          <h1>Sobre mim</h1>
+          <h1 id="about">Sobre mim</h1>
           <p>
             Eu sou [Seu Nome], especialista em procedimentos estéticos que
             transformam e rejuvenescem. Com uma abordagem personalizada, estou
@@ -171,9 +171,7 @@ export default function Estetica() {
             versão mais confiante de si mesmo(a).
           </p>
         </AboutCard>
-
-        <Depoimentos />
-
+        <Depoimentos />{" "}
         <MapSection>
           <MapText>
             <Image
@@ -198,7 +196,7 @@ export default function Estetica() {
             referrerpolicy="no-referrer-when-downgrade"
           ></Map>
         </MapSection>
-        <ContactSection>
+        <ContactSection id="contact">
           <ContactTitle>Entre em contato</ContactTitle>
           <ContactSubtitle>Blablabla</ContactSubtitle>
         </ContactSection>

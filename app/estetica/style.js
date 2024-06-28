@@ -10,6 +10,7 @@ export const Container = styled.div`
   display: flex;
   align-items: center;
   flex-direction: column;
+  position: relative;
 `;
 
 export const RightBlob = styled.div`
@@ -43,21 +44,34 @@ export const LeftBlob = styled.div`
 export const Nav = styled.div`
   margin-top: 40px;
   position: sticky;
-  width: 100%;
+  top: 5%;
+  left: 0%;
   font-size: 15px;
+  z-index: 99;
+  background-color: white;
+  padding: 5px 15px;
+  min-width: 500px;
+  background: rgba(255, 255, 255, 0.5);
+  border-radius: 45px;
+  backdrop-filter: blur(5px);
+  -webkit-backdrop-filter: blur(5px);
+  border: 1px solid rgba(255, 255, 255, 0.3);
 
   @media (max-width: 768px) {
+    min-width: unset;
     position: fixed;
     top: 5%;
     left: -230px;
     width: 230px;
     height: 100%;
+    padding: 0;
     background-color: white;
     transition: left 0.3s;
-    z-index: 99;
     border: 1px solid #595758;
     border-radius: 10px;
     border-left: none;
+    backdrop-filter: blur(0);
+    -webkit-backdrop-filter: blur(0);
   }
 `;
 
@@ -111,6 +125,9 @@ export const Ul = styled.ul`
   justify-content: center;
   align-items: center;
   gap: 2.5rem;
+  margin: 10px 0;
+  padding: 0;
+  box-sizing: border-box;
 
   @media (max-width: 768px) {
     flex-direction: column;
@@ -241,6 +258,13 @@ export const HeroIcon = styled(Image)`
   @media (max-width: 600px) {
     scale: 0.7;
     right: 0;
+  }
+  @media (max-width: 500px) {
+    scale: 0.5;
+    right: -10%;
+  }
+  @media (max-width: 400px) {
+    right: -15%;
   }
 `;
 // PROCEDIMENTOS

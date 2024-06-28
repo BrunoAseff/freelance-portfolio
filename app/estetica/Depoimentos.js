@@ -51,7 +51,7 @@ export default function Depoimentos() {
   ];
 
   return (
-    <Container>
+    <Container id="dep">
       <Title>Depoimentos</Title>
       <Subtitle>
         Dê uma olhada no depoimento das pessoas que confiam no nosso trabalho:
@@ -106,10 +106,11 @@ const Subtitle = styled.p`
   font-size: 1rem;
   margin-bottom: 20px;
   padding: 0 40px;
+  text-overflow: ellipsis;
 `;
 
 const DepContainer = styled.div`
-  z-index: 99;
+  z-index: 98;
   position: relative;
   display: flex;
   align-items: center;
@@ -118,6 +119,10 @@ const DepContainer = styled.div`
   width: 100%;
   @media (max-width: 650px) {
     margin-left: 100px;
+  }
+  @media (max-width: 450px) {
+    width: 300px;
+    width: 95%;
   }
 `;
 
@@ -152,10 +157,6 @@ const DepCard = styled.div`
   @media (max-width: 650px) {
     padding: 15px 3px;
   }
-
-  @media (max-width: 450px) {
-    padding: 40px 3px;
-  }
 `;
 
 const DepName = styled.div`
@@ -182,6 +183,11 @@ const DepSubtitle = styled.p`
   @media (max-width: 650px) {
     margin: 10px 0 0 10px;
   }
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 5; /* Limit to 3 lines */
+  overflow: hidden;
+  text-overflow: ellipsis;
 `;
 
 const DepImage = styled(Image)`
