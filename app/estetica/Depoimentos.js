@@ -1,15 +1,49 @@
-import React, { useState } from "react";
+import React, { useState, useMemo } from "react";
 import styled from "styled-components";
 import Image from "next/image";
 
 export default function Depoimentos() {
-  const initialState = [
-    { zIndex: 1, right: "35%", marginBottom: "0px", rotate: "0deg" },
-    { zIndex: -1, right: "30%", marginBottom: "30px", rotate: "3deg" },
-    { zIndex: -2, right: "25%", marginBottom: "35px", rotate: "5deg" },
-    { zIndex: -3, right: "20%", marginBottom: "40px", rotate: "7deg" },
-    { zIndex: -4, right: "15%", marginBottom: "45px", rotate: "9deg" },
-  ];
+  const initialState = useMemo(
+    () => [
+      { zIndex: 1, right: "35%", marginBottom: "0px", rotate: "0deg" },
+      { zIndex: -1, right: "30%", marginBottom: "30px", rotate: "3deg" },
+      { zIndex: -2, right: "25%", marginBottom: "35px", rotate: "5deg" },
+      { zIndex: -3, right: "20%", marginBottom: "40px", rotate: "7deg" },
+      { zIndex: -4, right: "15%", marginBottom: "45px", rotate: "9deg" },
+    ],
+    []
+  );
+
+  const testimonials = useMemo(
+    () => [
+      {
+        text: "Desde que comecei a frequentar este centro estético, minha pele melhorou significativamente. Os tratamentos são eficazes e os profissionais extremamente dedicados.",
+        author: "Carla Silva",
+        image: "/estetica-mulher-1.png",
+      },
+      {
+        text: "Estou muito feliz com os resultados do procedimento estético. A equipe aqui é muito profissional e atenciosa, recomendo!",
+        author: "Maitê Aseff",
+        image: "/estetica-mulher-2.png",
+      },
+      {
+        text: "O ambiente é acolhedor e os tratamentos são feitos com muito cuidado. Os resultados são visíveis e duradouros. Recomendo a todos!",
+        author: "Ana Luíza",
+        image: "/estetica-mulher-3.png",
+      },
+      {
+        text: "Não poderia estar mais satisfeito com o atendimento que recebi. Os profissionais são realmente especializados e os resultados foram além das minhas expectativas.",
+        author: "Joana ",
+        image: "/estetica-mulher-4.png",
+      },
+      {
+        text: "Cada sessão de tratamento aqui me deixou mais confiante. Os resultados são naturais e exatamente o que eu esperava. Vale cada centavo!",
+        author: "José Carlos",
+        image: "/estetica-mulher-5.png",
+      },
+    ],
+    []
+  );
 
   const [order, setOrder] = useState(initialState);
 
@@ -22,34 +56,6 @@ export default function Depoimentos() {
     });
   };
 
-  const testimonials = [
-    {
-      text: "Desde que comecei a frequentar este centro estético, minha pele melhorou significativamente. Os tratamentos são eficazes e os profissionais extremamente dedicados.",
-      author: "Carla Silva",
-      image: "/estetica-mulher-1.png",
-    },
-    {
-      text: "Estou muito feliz com os resultados do procedimento estético. A equipe aqui é muito profissional e atenciosa, recomendo!",
-      author: "Maitê Aseff",
-      image: "/estetica-mulher-2.png",
-    },
-    {
-      text: "O ambiente é acolhedor e os tratamentos são feitos com muito cuidado. Os resultados são visíveis e duradouros. Recomendo a todos!",
-      author: "Ana Luíza",
-      image: "/estetica-mulher-3.png",
-    },
-    {
-      text: "Não poderia estar mais satisfeito com o atendimento que recebi. Os profissionais são realmente especializados e os resultados foram além das minhas expectativas.",
-      author: "Joana ",
-      image: "/estetica-mulher-4.png",
-    },
-    {
-      text: "Cada sessão de tratamento aqui me deixou mais confiante. Os resultados são naturais e exatamente o que eu esperava. Vale cada centavo!",
-      author: "José Carlos",
-      image: "/estetica-mulher-5.png",
-    },
-  ];
-
   return (
     <Container id="dep">
       <Title>Depoimentos</Title>
@@ -58,34 +64,42 @@ export default function Depoimentos() {
       </Subtitle>
       <DepContainer>
         {order.map((style, index) => (
-          <DepCard
-            onClick={handleClick}
+          <DepTestimonial
             key={index}
-            style={{
-              zIndex: style.zIndex,
-              right: style.right,
-              marginBottom: style.marginBottom,
-              transform: `rotate(${style.rotate})`,
-              "--rotate": style.rotate,
-            }}
-          >
-            <DepSubtitle>{testimonials[index].text}</DepSubtitle>
-            <DepName>
-              <DepImage
-                src={testimonials[index].image}
-                width={30}
-                height={30}
-                alt={`Foto do autor ${testimonials[index].author}`}
-              />
-              <DepTitle>{testimonials[index].author}</DepTitle>
-            </DepName>
-          </DepCard>
+            testimonial={testimonials[index]}
+            style={style}
+            onClick={handleClick}
+          />
         ))}
       </DepContainer>
       <CycleButton onClick={handleClick}>Trocar</CycleButton>
     </Container>
   );
 }
+
+const DepTestimonial = ({ testimonial, style, onClick }) => (
+  <DepCard
+    onClick={onClick}
+    style={{
+      zIndex: style.zIndex,
+      right: style.right,
+      marginBottom: style.marginBottom,
+      transform: `rotate(${style.rotate})`,
+      "--rotate": style.rotate,
+    }}
+  >
+    <DepSubtitle>{testimonial.text}</DepSubtitle>
+    <DepName>
+      <DepImage
+        src={testimonial.image}
+        width={30}
+        height={30}
+        alt={`Foto do autor ${testimonial.author}`}
+      />
+      <DepTitle>{testimonial.author}</DepTitle>
+    </DepName>
+  </DepCard>
+);
 
 const Container = styled.div`
   position: relative;
@@ -174,6 +188,7 @@ const DepName = styled.div`
 
 const DepTitle = styled.h1`
   font-size: 1.1rem;
+  font-weight: 900;
 `;
 
 const DepSubtitle = styled.p`
@@ -200,7 +215,7 @@ const DepImage = styled(Image)`
   }
 `;
 
-const CycleButton = styled.button`
+export const CycleButton = styled.button`
   position: absolute;
   bottom: -140%;
   background-color: black;

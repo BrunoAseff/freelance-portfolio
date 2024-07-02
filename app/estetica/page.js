@@ -20,7 +20,6 @@ import {
   ButtonSpan,
   TextWrapper,
   ProcImage,
-  Gif,
   Map,
   MapSection,
   MapText,
@@ -32,6 +31,14 @@ import {
   ContactTitle,
   ContactSubtitle,
   ContactSection,
+  ContactWrapper,
+  ContactText,
+  ContactTextWrapper,
+  ContactImage,
+  Title,
+  ContactDescription,
+  ImageWrapper,
+  ContactButton,
 } from "./style.js";
 import Depoimentos from "./Depoimentos.js";
 import GlobalStyles from "./GlobalStyles.js";
@@ -198,7 +205,74 @@ export default function Estetica() {
         </MapSection>
         <ContactSection id="contact">
           <ContactTitle>Entre em contato</ContactTitle>
-          <ContactSubtitle>Blablabla</ContactSubtitle>
+          <ContactSubtitle>
+            Fale conosco para saber mais sobre nossos serviços
+          </ContactSubtitle>
+          <ContactWrapper>
+            <ContactTextWrapper>
+              <ImageWrapper>
+                <ContactImage
+                  src="/adress.svg"
+                  width={30}
+                  height={30}
+                  alt="Picture of the author"
+                />
+              </ImageWrapper>
+              <Title>
+                <ContactText>Endereço</ContactText>
+                <ContactDescription>
+                  Rua das Flores, 123
+                  <br />
+                  Bairro Jardim das Américas
+                  <br />
+                  Cidade das Estrelas, SP
+                  <br />
+                </ContactDescription>
+              </Title>
+            </ContactTextWrapper>
+            <ContactTextWrapper>
+              <ImageWrapper>
+                <ContactImage
+                  src="/phone.svg"
+                  width={25}
+                  height={25}
+                  alt="Picture of the author"
+                  className="different"
+                  style={{ marginTop: "5px" }}
+                />
+              </ImageWrapper>
+              <Title>
+                <ContactText>Telefone</ContactText>
+                <ContactDescription>
+                  (11) 1234-5678
+                  <br />
+                  (21) 8765-4321
+                </ContactDescription>
+              </Title>
+            </ContactTextWrapper>
+            <ContactTextWrapper>
+              <ImageWrapper>
+                <ContactImage
+                  src="/social.svg"
+                  width={30}
+                  height={30}
+                  alt="Picture of the author"
+                />
+              </ImageWrapper>
+              <Title>
+                <ContactText>Redes sociais</ContactText>
+                <ContactDescription>
+                  @exemploTwitter
+                  <br />
+                  @exemploInstagram
+                  <br />
+                  /exemploFacebook
+                </ContactDescription>
+              </Title>
+            </ContactTextWrapper>
+          </ContactWrapper>
+
+          <ContactButton>Chamar no Whatsapp</ContactButton>
         </ContactSection>
       </Container>
     </>

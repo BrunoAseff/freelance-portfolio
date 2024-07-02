@@ -385,7 +385,7 @@ export const AboutImage = styled(Image)`
 // MAPA
 
 export const MapSection = styled.div`
-  margin: 100px 0;
+  margin: 50px 0;
   display: flex;
   width: 90%;
   align-items: center;
@@ -417,20 +417,125 @@ export const Map = styled.iframe`
 //ENTRE EM CONTATO
 
 export const ContactSection = styled.div`
-  margin-bottom: 100px;
+  padding-bottom: 100px;
+  display: flex;
   align-items: center;
   justify-content: center;
+  flex-direction: column;
+  width: 100%;
+  text-align: center;
+  background-color: white;
+  border-top: 1px black solid;
 `;
 
 export const ContactTitle = styled.h1`
   margin-top: 100px;
   margin-bottom: 0;
   font-size: 3rem;
-  color: var(--second);
+  color: black;
+  padding: 0 40px;
 `;
 
 export const ContactSubtitle = styled.p`
   font-size: 1rem;
-  margin-bottom: 20px;
+  margin-bottom: 50px;
   padding: 0 40px;
+`;
+
+export const ContactWrapper = styled.div`
+  display: flex;
+  justify-content: space-evenly;
+  min-width: 50%;
+  background-color: white;
+  padding: 30px 7px 7px 7px;
+  min-width: 70%;
+  flex-shrink: 0;
+  min-width: 1100px;
+  box-shadow: 0 0 200px 1px rgba(255, 84, 238, 0.3);
+  border-radius: 30px;
+  margin-bottom: 30px;
+
+  @media (max-width: 1000px) {
+    flex-direction: column;
+    justify-content: center;
+    min-width: unset;
+    padding: 20px 20px 10px 20px;
+    gap: 3rem;
+  }
+  @media (max-width: 1200px) {
+    min-width: unset;
+    gap: 4rem;
+    padding: 30px 40px 20px 40px;
+  }
+`;
+
+export const ContactTextWrapper = styled.div`
+  display: flex;
+`;
+
+export const Title = styled.div`
+  display: flex;
+  text-align: left;
+  gap: 0.3rem;
+  flex-direction: column;
+`;
+
+export const ImageWrapper = styled.div`
+  position: relative;
+  padding: 20px;
+  margin-right: 20px;
+  justify-content: center;
+  align-items: center;
+  margin-top: 0px;
+  &::before {
+    content: "";
+    position: absolute;
+    top: 33%;
+    left: 50%;
+    width: 70px;
+    height: 70px;
+    background-color: var(--second);
+    border-radius: 100%;
+    transform: translate(-50%, -50%);
+    z-index: 1;
+    @media (max-width: 1000px) {
+      margin-top: 5px;
+    }
+  }
+`;
+
+export const ContactImage = styled(Image)`
+  position: relative;
+  margin-top: 2px;
+  z-index: 1;
+`;
+
+export const ContactText = styled.div`
+  font-size: 1.2rem;
+  color: black;
+  font-weight: 900;
+  margin: 0;
+  padding: 0;
+`;
+
+export const ContactDescription = styled.p`
+  font-size: 1rem;
+  color: var(--text);
+  margin-top: 5px;
+`;
+
+export const ContactButton = styled.button`
+  margin: 30px;
+  background-color: black;
+  color: white;
+  font-size: 1rem;
+  padding: 20px 40px;
+  border: black solid 0px;
+  border-radius: 10px;
+  cursor: pointer;
+
+  &:hover {
+    background-color: #1c000d;
+    cursor: pointer;
+  }
 `;

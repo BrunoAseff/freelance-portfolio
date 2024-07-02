@@ -1,13 +1,13 @@
 export const cardsData = [
   {
     title: "Estética",
-    subtitle: "Lorem ipsum fodkamdfasdfasd",
-    imgSrc: "/template.png",
+    subtitle: "Página de vendas de uma clínica de estética",
+    imgSrc: "/estetica-print.png",
     pallete: [
-      { color: "#5e548e", top: "70%" },
-      { color: "#9f86c0", top: "60%" },
-      { color: "#be95c4", top: "50%" },
-      { color: "#e0b1cb", top: "40%" },
+      { color: "#ffe8ea", top: "70%" },
+      { color: "#ffc8dd ", top: "60%" },
+      { color: "#ff99ac", top: "50%" },
+      { color: "rgb(89,87,88)", top: "40%" },
     ],
   },
   {
